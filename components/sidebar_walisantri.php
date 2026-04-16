@@ -1,0 +1,67 @@
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
+
+<aside
+    class="bg-slate-900 w-64 min-h-screen flex flex-col shadow-2xl transition-transform transform -translate-x-full md:translate-x-0 md:static fixed z-20"
+    id="sidebar">
+
+    <div class="flex items-center justify-center h-20 border-b border-slate-800/60 mt-2">
+        <div class="flex items-center gap-3">
+            <div
+                class="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center shadow-lg shadow-indigo-500/30 text-white">
+                <i class="fas fa-home text-xl"></i>
+            </div>
+            <h1 class="text-xl font-extrabold text-white tracking-wider">PORTAL WALI</h1>
+        </div>
+    </div>
+
+    <div class="px-4 py-6 overflow-y-auto flex-grow custom-scrollbar">
+        <ul class="space-y-1.5">
+
+            <li class="mb-2">
+                <a href="index.php"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group <?= ($current_page == 'index.php') ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30' : 'text-slate-400 hover:bg-slate-800 hover:text-white' ?>">
+                    <i
+                        class="fas fa-chart-pie w-5 text-center text-lg <?= ($current_page == 'index.php') ? 'text-white' : 'text-slate-500 group-hover:text-indigo-400' ?> transition-colors"></i>
+                    <span class="font-medium text-sm">Dashboard Utama</span>
+                </a>
+            </li>
+
+            <li class="pt-5 pb-2">
+                <div class="flex items-center gap-3 px-4">
+                    <!-- <div
+                        class="w-6 h-6 rounded-lg bg-slate-800/80 flex items-center justify-center border border-slate-700/50 shadow-sm">
+                        <i class="fas fa-child text-pink-400 text-[10px]"></i>
+                    </div> -->
+                    <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Informasi Anak</p>
+                </div>
+            </li>
+
+            <li>
+                <a href="akademik.php"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group <?= ($current_page == 'akademik.php') ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30' : 'text-slate-400 hover:bg-slate-800 hover:text-white' ?>">
+                    <i
+                        class="fas fa-book-open w-5 text-center text-lg <?= ($current_page == 'akademik.php') ? 'text-white' : 'text-slate-500 group-hover:text-indigo-400' ?> transition-colors"></i>
+                    <span class="font-medium text-sm">Nilai & Raport</span>
+                </a>
+            </li>
+            <li>
+                <a href="pembayaran.php"
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 group <?= ($current_page == 'pembayaran.php') ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30' : 'text-slate-400 hover:bg-slate-800 hover:text-white' ?>">
+                    <i
+                        class="fas fa-file-invoice-dollar w-5 text-center text-lg <?= ($current_page == 'pembayaran.php') ? 'text-white' : 'text-slate-500 group-hover:text-indigo-400' ?> transition-colors"></i>
+                    <span class="font-medium text-sm">Tagihan & Bayar SPP</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="p-4 border-t border-slate-800/60">
+        <a href="../logout.php" onclick="return confirm('Yakin ingin keluar dari portal?')"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 text-red-400 hover:bg-red-500/10 hover:text-red-300 group">
+            <i class="fas fa-sign-out-alt w-5 text-center text-lg group-hover:-translate-x-1 transition-transform"></i>
+            <span class="font-medium text-sm">Keluar Sistem</span>
+        </a>
+    </div>
+</aside>
