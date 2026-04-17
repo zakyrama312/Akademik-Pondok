@@ -12,14 +12,12 @@
 <body class="bg-slate-50 flex h-screen font-sans overflow-hidden">
 
     <div class="hidden lg:flex lg:w-1/2 bg-cover bg-center relative"
-        style="background-image: url('https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop');">
+        style="background-image: url('uploads/img/depan_pondok_putri.jpg');">
         <div
             class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40 flex flex-col justify-end p-16">
             <div class="text-white transform transition-all duration-700 hover:scale-105">
-                <div
-                    class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-xl shadow-blue-500/30">
-                    <i class="fas fa-graduation-cap text-3xl"></i>
-                </div>
+                <img src="uploads/img/Logo_Pondok_Bunder.png" alt="Logo Pondok Putri"
+                    class="w-20 h-20  mb-4 object-contain drop-shadow-xl">
                 <h1 class="text-4xl font-extrabold mb-4 leading-tight">Sistem Informasi <br> Akademik & Keuangan</h1>
                 <p class="text-slate-300 text-lg max-w-md">Kelola data santri, jadwal akademik, dan pantau pembayaran
                     SPP dalam satu pintu dengan mudah dan efisien.</p>
@@ -31,10 +29,8 @@
         <div class="w-full max-w-md">
 
             <div class="lg:hidden mb-8 text-center">
-                <div
-                    class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-xl shadow-blue-500/30 text-white">
-                    <i class="fas fa-graduation-cap text-3xl"></i>
-                </div>
+                <img src="uploads/img/Logo_Pondok_Bunder.png" alt="Logo Pondok Putri"
+                    class="w-20 h-20 mx-auto mb-4 object-contain drop-shadow-xl">
                 <h2 class="text-2xl font-bold text-slate-800">Sistem Akademik</h2>
             </div>
 

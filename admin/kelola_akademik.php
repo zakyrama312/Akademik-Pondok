@@ -105,77 +105,82 @@ include '../components/header.php';
 </style>
 
 <?php include '../components/sidebar.php'; ?>
-<?php include '../components/navbar.php'; ?>
 
-<main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 relative bg-gray-50">
+<div class="flex-1 flex flex-col h-screen overflow-hidden">
 
-    <?php if (isset($_SESSION['pesan_sukses'])): ?>
-        <div id="alert-msg"
-            class="mb-6 bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-xl flex items-center justify-between shadow-sm transition-opacity duration-300">
-            <div class="flex items-center gap-3">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clip-rule="evenodd"></path>
-                </svg>
-                <p class="font-medium text-sm"><?php echo $_SESSION['pesan_sukses']; ?></p>
+    <?php include '../components/navbar.php'; ?>
+
+    <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 relative bg-gray-50">
+
+        <?php if (isset($_SESSION['pesan_sukses'])): ?>
+            <div id="alert-msg"
+                class="mb-6 bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-xl flex items-center justify-between shadow-sm transition-opacity duration-300">
+                <div class="flex items-center gap-3">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="font-medium text-sm"><?php echo $_SESSION['pesan_sukses']; ?></p>
+                </div>
+                <button onclick="this.parentElement.style.display='none'" class="text-emerald-500"><svg class="w-5 h-5"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg></button>
             </div>
-            <button onclick="this.parentElement.style.display='none'" class="text-emerald-500"><svg class="w-5 h-5"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg></button>
-        </div>
-        <?php unset($_SESSION['pesan_sukses']); ?>
-    <?php endif; ?>
+            <?php unset($_SESSION['pesan_sukses']); ?>
+        <?php endif; ?>
 
-    <div class="bg-white rounded-2xl shadow-sm border border-blue-100 overflow-hidden mb-6">
-        <div
-            class="p-5 bg-blue-50/50 border-b border-blue-100 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div>
-                <h2 class="text-lg font-bold text-blue-800"><i class="fas fa-book-open mr-2"></i> Pengelolaan Raport
-                    Santri</h2>
-                <p class="text-sm text-blue-600/80 mt-1">Pilih Tahun Ajaran dan Semester untuk menginput Nilai Sikap &
-                    Keaktifan.</p>
+        <div class="bg-white rounded-2xl shadow-sm border border-blue-100 overflow-hidden mb-6">
+            <div
+                class="p-5 bg-blue-50/50 border-b border-blue-100 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h2 class="text-lg font-bold text-blue-800"><i class="fas fa-book-open mr-2"></i> Pengelolaan Raport
+                        Santri</h2>
+                    <p class="text-sm text-blue-600/80 mt-1">Pilih Tahun Ajaran dan Semester untuk menginput Nilai Sikap
+                        &
+                        Keaktifan.</p>
+                </div>
+
+                <form method="GET" action="kelola_akademik.php" class="flex items-center gap-3 w-full md:w-auto">
+                    <select name="ta"
+                        class="px-4 py-2 rounded-xl border border-blue-200 text-blue-800 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                        <option value="2024/2025" <?= $ta_aktif == '2024/2025' ? 'selected' : '' ?>>2024/2025</option>
+                        <option value="2025/2026" <?= $ta_aktif == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
+                        <option value="2026/2027" <?= $ta_aktif == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
+                    </select>
+                    <select name="smt"
+                        class="px-4 py-2 rounded-xl border border-blue-200 text-blue-800 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                        <option value="Ganjil" <?= $smt_aktif == 'Ganjil' ? 'selected' : '' ?>>Ganjil</option>
+                        <option value="Genap" <?= $smt_aktif == 'Genap' ? 'selected' : '' ?>>Genap</option>
+                    </select>
+                    <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-bold transition shadow-md shadow-blue-500/30">
+                        Tampilkan
+                    </button>
+                </form>
             </div>
-
-            <form method="GET" action="kelola_akademik.php" class="flex items-center gap-3 w-full md:w-auto">
-                <select name="ta"
-                    class="px-4 py-2 rounded-xl border border-blue-200 text-blue-800 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-                    <option value="2024/2025" <?= $ta_aktif == '2024/2025' ? 'selected' : '' ?>>2024/2025</option>
-                    <option value="2025/2026" <?= $ta_aktif == '2025/2026' ? 'selected' : '' ?>>2025/2026</option>
-                    <option value="2026/2027" <?= $ta_aktif == '2026/2027' ? 'selected' : '' ?>>2026/2027</option>
-                </select>
-                <select name="smt"
-                    class="px-4 py-2 rounded-xl border border-blue-200 text-blue-800 font-bold focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
-                    <option value="Ganjil" <?= $smt_aktif == 'Ganjil' ? 'selected' : '' ?>>Ganjil</option>
-                    <option value="Genap" <?= $smt_aktif == 'Genap' ? 'selected' : '' ?>>Genap</option>
-                </select>
-                <button type="submit"
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl font-bold transition shadow-md shadow-blue-500/30">
-                    Tampilkan
-                </button>
-            </form>
         </div>
-    </div>
 
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        <div class="overflow-x-auto w-full">
-            <table id="tabel-akademik" class="w-full text-left whitespace-nowrap">
-                <thead>
-                    <tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider">
-                        <th class="p-4 font-semibold w-16 text-center">No</th>
-                        <th class="p-4 font-semibold">Profil Santri</th>
-                        <th class="p-4 font-semibold text-center">Sikap</th>
-                        <th class="p-4 font-semibold text-center">Keaktifan</th>
-                        <th class="p-4 font-semibold text-center">Status Raport</th>
-                        <th class="p-4 font-semibold text-center">Aksi</th>
-                    </tr>
-                </thead>
-                <tbody class="text-sm text-gray-700">
-                    <?php
-                    $no = 1;
-                    // Pakai LEFT JOIN biar semua santri aktif muncul, walaupun nilai sikapnya belum diisi
-                    $query_santri = mysqli_query($koneksi, "
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="overflow-x-auto w-full">
+                <table id="tabel-akademik" class="w-full text-left whitespace-nowrap">
+                    <thead>
+                        <tr class="bg-gray-50 text-gray-500 text-xs uppercase tracking-wider">
+                            <th class="p-4 font-semibold w-16 text-center">No</th>
+                            <th class="p-4 font-semibold">Profil Santri</th>
+                            <th class="p-4 font-semibold text-center">Sikap</th>
+                            <th class="p-4 font-semibold text-center">Keaktifan</th>
+                            <th class="p-4 font-semibold text-center">Status Raport</th>
+                            <th class="p-4 font-semibold text-center">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm text-gray-700">
+                        <?php
+                        $no = 1;
+                        // Pakai LEFT JOIN biar semua santri aktif muncul, walaupun nilai sikapnya belum diisi
+                        $query_santri = mysqli_query($koneksi, "
                         SELECT s.id_santri, s.nis, s.nama_santri, s.kelas, 
                                n.nilai_sikap, n.nilai_keaktifan, n.catatan_wali_kelas 
                         FROM santri s 
@@ -185,139 +190,141 @@ include '../components/header.php';
                         ORDER BY s.kelas ASC, s.nama_santri ASC
                     ");
 
-                    while ($d = mysqli_fetch_array($query_santri)):
-                        $status_isi = ($d['nilai_sikap'] != null) ? true : false;
-                    ?>
-                        <tr class="hover:bg-blue-50/30 transition-colors border-b border-gray-50">
-                            <td class="p-4 text-center text-gray-500 font-medium">#<?php echo $no++; ?></td>
-                            <td class="p-4">
-                                <p class="font-bold text-gray-800"><?php echo htmlspecialchars($d['nama_santri']); ?></p>
-                                <p class="text-xs text-gray-500">Kelas: <span
-                                        class="font-bold text-blue-600"><?php echo $d['kelas']; ?></span> | NIS:
-                                    <?php echo htmlspecialchars($d['nis']); ?></p>
-                            </td>
-                            <td
-                                class="p-4 text-center font-bold <?php echo $d['nilai_sikap'] == 'A' ? 'text-emerald-600' : ($d['nilai_sikap'] == 'B' ? 'text-blue-600' : 'text-amber-600'); ?>">
-                                <?php echo $status_isi ? $d['nilai_sikap'] : '-'; ?>
-                            </td>
-                            <td
-                                class="p-4 text-center font-bold <?php echo $d['nilai_keaktifan'] == 'A' ? 'text-emerald-600' : ($d['nilai_keaktifan'] == 'B' ? 'text-blue-600' : 'text-amber-600'); ?>">
-                                <?php echo $status_isi ? $d['nilai_keaktifan'] : '-'; ?>
-                            </td>
-                            <td class="p-4 text-center">
-                                <?php if ($status_isi): ?>
-                                    <span
-                                        class="inline-flex px-2 py-1 rounded bg-emerald-50 text-emerald-600 text-xs font-bold border border-emerald-100"><i
-                                            class="fas fa-check-circle mr-1"></i> Siap Cetak</span>
-                                <?php else: ?>
-                                    <span
-                                        class="inline-flex px-2 py-1 rounded bg-red-50 text-red-600 text-xs font-bold border border-red-100"><i
-                                            class="fas fa-exclamation-circle mr-1"></i> Belum Diisi</span>
-                                <?php endif; ?>
-                            </td>
-                            <td class="p-4">
-                                <div class="flex items-center justify-center gap-2">
-                                    <button
-                                        onclick="bukaModalNilai(<?php echo $d['id_santri']; ?>, '<?php echo addslashes($d['nama_santri']); ?>', '<?php echo $d['nilai_sikap']; ?>', '<?php echo $d['nilai_keaktifan']; ?>', '<?php echo addslashes($d['catatan_wali_kelas']); ?>')"
-                                        class="p-2 <?php echo $status_isi ? 'bg-amber-50 text-amber-600 hover:bg-amber-500' : 'bg-blue-50 text-blue-600 hover:bg-blue-600'; ?> hover:text-white rounded-lg transition"
-                                        title="<?php echo $status_isi ? 'Edit Nilai' : 'Input Nilai Baru'; ?>">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
-                                            </path>
-                                        </svg>
-                                    </button>
-
+                        while ($d = mysqli_fetch_array($query_santri)):
+                            $status_isi = ($d['nilai_sikap'] != null) ? true : false;
+                        ?>
+                            <tr class="hover:bg-blue-50/30 transition-colors border-b border-gray-50">
+                                <td class="p-4 text-center text-gray-500 font-medium">#<?php echo $no++; ?></td>
+                                <td class="p-4">
+                                    <p class="font-bold text-gray-800"><?php echo htmlspecialchars($d['nama_santri']); ?>
+                                    </p>
+                                    <p class="text-xs text-gray-500">Kelas: <span
+                                            class="font-bold text-blue-600"><?php echo $d['kelas']; ?></span> | NIS:
+                                        <?php echo htmlspecialchars($d['nis']); ?></p>
+                                </td>
+                                <td
+                                    class="p-4 text-center font-bold <?php echo $d['nilai_sikap'] == 'A' ? 'text-emerald-600' : ($d['nilai_sikap'] == 'B' ? 'text-blue-600' : 'text-amber-600'); ?>">
+                                    <?php echo $status_isi ? $d['nilai_sikap'] : '-'; ?>
+                                </td>
+                                <td
+                                    class="p-4 text-center font-bold <?php echo $d['nilai_keaktifan'] == 'A' ? 'text-emerald-600' : ($d['nilai_keaktifan'] == 'B' ? 'text-blue-600' : 'text-amber-600'); ?>">
+                                    <?php echo $status_isi ? $d['nilai_keaktifan'] : '-'; ?>
+                                </td>
+                                <td class="p-4 text-center">
                                     <?php if ($status_isi): ?>
-                                        <a href="cetak_raport.php?id=<?php echo $d['id_santri']; ?>&ta=<?php echo urlencode($ta_aktif); ?>&smt=<?php echo $smt_aktif; ?>"
-                                            target="_blank"
-                                            class="p-2 bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white rounded-lg transition"
-                                            title="Cetak Raport">
-                                            <i class="fas fa-print text-lg"></i>
-                                        </a>
+                                        <span
+                                            class="inline-flex px-2 py-1 rounded bg-emerald-50 text-emerald-600 text-xs font-bold border border-emerald-100"><i
+                                                class="fas fa-check-circle mr-1"></i> Siap Cetak</span>
                                     <?php else: ?>
-                                        <span class="p-2 bg-gray-100 text-gray-300 rounded-lg cursor-not-allowed"
-                                            title="Isi nilai sikap dahulu untuk mencetak raport"><i
-                                                class="fas fa-print text-lg"></i></span>
+                                        <span
+                                            class="inline-flex px-2 py-1 rounded bg-red-50 text-red-600 text-xs font-bold border border-red-100"><i
+                                                class="fas fa-exclamation-circle mr-1"></i> Belum Diisi</span>
                                     <?php endif; ?>
-                                </div>
-                            </td>
-                        </tr>
-                    <?php endwhile; ?>
-                </tbody>
-            </table>
-        </div>
-    </div>
+                                </td>
+                                <td class="p-4">
+                                    <div class="flex items-center justify-center gap-2">
+                                        <button
+                                            onclick="bukaModalNilai(<?php echo $d['id_santri']; ?>, '<?php echo addslashes($d['nama_santri']); ?>', '<?php echo $d['nilai_sikap']; ?>', '<?php echo $d['nilai_keaktifan']; ?>', '<?php echo addslashes($d['catatan_wali_kelas']); ?>')"
+                                            class="p-2 <?php echo $status_isi ? 'bg-amber-50 text-amber-600 hover:bg-amber-500' : 'bg-blue-50 text-blue-600 hover:bg-blue-600'; ?> hover:text-white rounded-lg transition"
+                                            title="<?php echo $status_isi ? 'Edit Nilai' : 'Input Nilai Baru'; ?>">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                                                </path>
+                                            </svg>
+                                        </button>
 
-    <div id="modal-nilai"
-        class="fixed inset-0 bg-gray-900/60 z-[60] backdrop-blur-sm flex justify-center items-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="bg-white rounded-2xl w-full max-w-md shadow-2xl transform scale-95 transition-transform duration-300"
-            id="modal-nilai-content">
-            <div
-                class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-blue-50/50 rounded-t-2xl">
-                <h3 class="text-xl font-bold text-blue-800"><i class="fas fa-star text-amber-400 mr-2"></i> Input Nilai
-                    Akhir</h3>
-                <button type="button" onclick="tutupModal('modal-nilai')"
-                    class="text-gray-400 hover:text-red-500 p-1.5 rounded-lg transition"><i
-                        class="fas fa-times text-xl"></i></button>
+                                        <?php if ($status_isi): ?>
+                                            <a href="cetak_raport.php?id=<?php echo $d['id_santri']; ?>&ta=<?php echo urlencode($ta_aktif); ?>&smt=<?php echo $smt_aktif; ?>"
+                                                target="_blank"
+                                                class="p-2 bg-emerald-50 text-emerald-600 hover:bg-emerald-600 hover:text-white rounded-lg transition"
+                                                title="Cetak Raport">
+                                                <i class="fas fa-print text-lg"></i>
+                                            </a>
+                                        <?php else: ?>
+                                            <span class="p-2 bg-gray-100 text-gray-300 rounded-lg cursor-not-allowed"
+                                                title="Isi nilai sikap dahulu untuk mencetak raport"><i
+                                                    class="fas fa-print text-lg"></i></span>
+                                        <?php endif; ?>
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php endwhile; ?>
+                    </tbody>
+                </table>
             </div>
-
-            <form action="kelola_akademik.php?ta=<?php echo urlencode($ta_aktif); ?>&smt=<?php echo $smt_aktif; ?>"
-                method="POST" class="p-6">
-                <input type="hidden" name="id_santri" id="input_id_santri">
-                <input type="hidden" name="tahun_ajaran" value="<?php echo $ta_aktif; ?>">
-                <input type="hidden" name="semester" value="<?php echo $smt_aktif; ?>">
-
-                <div class="mb-5 text-center">
-                    <p class="text-sm text-gray-500">Santri:</p>
-                    <h4 id="teks_nama_santri" class="font-bold text-lg text-gray-800">Nama Santri</h4>
-                    <p class="text-xs bg-gray-100 text-gray-600 inline-block px-2 py-1 rounded mt-1">
-                        <?php echo $smt_aktif; ?> - <?php echo $ta_aktif; ?></p>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nilai Sikap</label>
-                            <select name="nilai_sikap" id="input_sikap" required
-                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white font-bold text-gray-800">
-                                <option value="A">A (Sangat Baik)</option>
-                                <option value="B">B (Baik)</option>
-                                <option value="C">C (Cukup)</option>
-                                <option value="D">D (Kurang)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-1">Nilai Keaktifan</label>
-                            <select name="nilai_keaktifan" id="input_keaktifan" required
-                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white font-bold text-gray-800">
-                                <option value="A">A (Sangat Aktif)</option>
-                                <option value="B">B (Aktif)</option>
-                                <option value="C">C (Cukup)</option>
-                                <option value="D">D (Pasif)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Catatan Wali Kelas</label>
-                        <textarea name="catatan_wali_kelas" id="input_catatan" rows="3" required
-                            placeholder="Contoh: Terus pertahankan semangat belajarmu..."
-                            class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white"></textarea>
-                    </div>
-                </div>
-
-                <div class="mt-8">
-                    <button type="submit" name="simpan_nilai"
-                        class="w-full px-4 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">
-                        <i class="fas fa-save mr-2"></i> Simpan Data Raport
-                    </button>
-                </div>
-            </form>
         </div>
-    </div>
 
-</main>
+        <div id="modal-nilai"
+            class="fixed inset-0 bg-gray-900/60 z-[60] backdrop-blur-sm flex justify-center items-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+            <div class="bg-white rounded-2xl w-full max-w-md shadow-2xl transform scale-95 transition-transform duration-300"
+                id="modal-nilai-content">
+                <div
+                    class="px-6 py-4 border-b border-gray-100 flex justify-between items-center bg-blue-50/50 rounded-t-2xl">
+                    <h3 class="text-xl font-bold text-blue-800"><i class="fas fa-star text-amber-400 mr-2"></i> Input
+                        Nilai
+                        Akhir</h3>
+                    <button type="button" onclick="tutupModal('modal-nilai')"
+                        class="text-gray-400 hover:text-red-500 p-1.5 rounded-lg transition"><i
+                            class="fas fa-times text-xl"></i></button>
+                </div>
 
+                <form action="kelola_akademik.php?ta=<?php echo urlencode($ta_aktif); ?>&smt=<?php echo $smt_aktif; ?>"
+                    method="POST" class="p-6">
+                    <input type="hidden" name="id_santri" id="input_id_santri">
+                    <input type="hidden" name="tahun_ajaran" value="<?php echo $ta_aktif; ?>">
+                    <input type="hidden" name="semester" value="<?php echo $smt_aktif; ?>">
+
+                    <div class="mb-5 text-center">
+                        <p class="text-sm text-gray-500">Santri:</p>
+                        <h4 id="teks_nama_santri" class="font-bold text-lg text-gray-800">Nama Santri</h4>
+                        <p class="text-xs bg-gray-100 text-gray-600 inline-block px-2 py-1 rounded mt-1">
+                            <?php echo $smt_aktif; ?> - <?php echo $ta_aktif; ?></p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Nilai Sikap</label>
+                                <select name="nilai_sikap" id="input_sikap" required
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white font-bold text-gray-800">
+                                    <option value="A">A (Sangat Baik)</option>
+                                    <option value="B">B (Baik)</option>
+                                    <option value="C">C (Cukup)</option>
+                                    <option value="D">D (Kurang)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Nilai Keaktifan</label>
+                                <select name="nilai_keaktifan" id="input_keaktifan" required
+                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white font-bold text-gray-800">
+                                    <option value="A">A (Sangat Aktif)</option>
+                                    <option value="B">B (Aktif)</option>
+                                    <option value="C">C (Cukup)</option>
+                                    <option value="D">D (Pasif)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Catatan Wali Kelas</label>
+                            <textarea name="catatan_wali_kelas" id="input_catatan" rows="3" required
+                                placeholder="Contoh: Terus pertahankan semangat belajarmu..."
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <button type="submit" name="simpan_nilai"
+                            class="w-full px-4 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-500/30">
+                            <i class="fas fa-save mr-2"></i> Simpan Data Raport
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
