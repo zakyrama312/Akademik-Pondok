@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pondok Pesantren Modern</title>
+    <title>Pondok Pesantren Al Falah Salafiyah</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
-    body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-    .bg-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
     </style>
 </head>
 
@@ -26,12 +26,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div
-                        class="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/30">
-                        <i class="fas fa-mosque"></i>
-                    </div>
-                    <span class="font-extrabold text-xl tracking-tight text-slate-800">Pondok<span
-                            class="text-emerald-600">Modern</span></span>
+                    <img src="uploads/img/Logo_AlFalah.png" alt="Logo Al Falah"
+                        class="w-10 h-10 object-contain drop-shadow-md">
+                    <span class="font-extrabold text-xl tracking-tight text-slate-800">Al Falah<span
+                            class="text-emerald-600"> Salafiyah</span></span>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
@@ -72,8 +70,9 @@
                     Membangun Generasi <span class="text-emerald-300">Qur'ani</span> yang Berakhlakul Karimah
                 </h1>
                 <p class="text-lg md:text-xl text-emerald-50/90 mb-10 leading-relaxed">
-                    Pondok Pesantren Modern memadukan kurikulum pendidikan formal dan ilmu agama Islam salaf untuk
-                    mencetak cendekiawan muslim yang tangguh di era digital.
+                    Yayasan Pondok Pesantren & Pendidikan Al Falah Salafiyah Jatirokeh memadukan kurikulum pendidikan
+                    formal dan ilmu agama Islam salaf untuk
+                    mencetak cendekiawan muslim yang tangguh.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#program"
@@ -295,11 +294,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center text-white">
-                            <i class="fas fa-mosque text-sm"></i>
-                        </div>
-                        <span class="font-extrabold text-xl tracking-tight text-white">Pondok<span
-                                class="text-emerald-500">Modern</span></span>
+                        <img src="uploads/img/Logo_AlFalah.png" alt="Logo Al Falah" class="w-8 h-8 object-contain">
+                        <span class="font-extrabold text-xl tracking-tight text-white">Al Falah<span
+                                class="text-emerald-500"> Salafiyah</span></span>
                     </div>
                     <p class="text-slate-400 leading-relaxed mb-6">Lembaga pendidikan Islam berbasisi teknologi yang
                         berkomitmen mencetak generasi unggul, berakhlak mulia, dan siap menghadapi tantangan global.</p>
@@ -321,7 +318,7 @@
                     <ul class="space-y-3">
                         <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-right text-xs"></i> Pendaftaran Santri</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
+                        <li><a href="#galeri" class="hover:text-emerald-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-right text-xs"></i> Galeri Kegiatan</a></li>
                         <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-right text-xs"></i> Berita & Artikel</a></li>
@@ -335,15 +332,15 @@
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-map-marker-alt mt-1 text-emerald-500"></i>
-                            <span>Jl. KH. Agus Salim, Slawi, Kabupaten Tegal, Jawa Tengah 52419</span>
+                            <span>Jl. Raya Brebes - Purwokerto Desa Jatirokeh Kec. Songgom Kab. Brebes 52266</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-phone-alt text-emerald-500"></i>
-                            <span>(0283) 1234567</span>
+                            <span>0857 2898 1547</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope text-emerald-500"></i>
-                            <span>info@pondokmodern.sch.id</span>
+                            <span>alfalahsalafyonline@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -351,7 +348,7 @@
 
             <div
                 class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-                <p>&copy; <?php echo date('Y'); ?> Pondok Pesantren Modern. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> Yayasan Al Falah Salafiyah Jatirokeh. All rights reserved.</p>
                 <p>Dibuat dengan <i class="fas fa-heart text-red-500 mx-1"></i> untuk Pendidikan.</p>
             </div>
         </div>

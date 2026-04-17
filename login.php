@@ -16,8 +16,8 @@
         <div
             class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900/40 flex flex-col justify-end p-16">
             <div class="text-white transform transition-all duration-700 hover:scale-105">
-                <img src="uploads/img/Logo_Pondok_Bunder.png" alt="Logo Pondok Putri"
-                    class="w-20 h-20  mb-4 object-contain drop-shadow-xl">
+                <!-- <img src="uploads/img/Logo_AlFalah.png" alt="Logo Pondok Putri"
+                    class="w-20 h-20  mb-4 object-contain drop-shadow-xl"> -->
                 <h1 class="text-4xl font-extrabold mb-4 leading-tight">Sistem Informasi <br> Akademik & Keuangan</h1>
                 <p class="text-slate-300 text-lg max-w-md">Kelola data santri, jadwal akademik, dan pantau pembayaran
                     SPP dalam satu pintu dengan mudah dan efisien.</p>
@@ -29,7 +29,7 @@
         <div class="w-full max-w-md">
 
             <div class="lg:hidden mb-8 text-center">
-                <img src="uploads/img/Logo_Pondok_Bunder.png" alt="Logo Pondok Putri"
+                <img src="uploads/img/Logo_AlFalah.png" alt="Logo Pondok Putri"
                     class="w-20 h-20 mx-auto mb-4 object-contain drop-shadow-xl">
                 <h2 class="text-2xl font-bold text-slate-800">Sistem Akademik</h2>
             </div>
@@ -93,8 +93,8 @@
 
             <div class="mt-8 text-center">
                 <p class="text-sm text-slate-500 font-medium">
-                    Lupa kata sandi? <a href="#"
-                        class="text-blue-600 font-bold hover:text-blue-800 transition-colors">Hubungi Admin</a>
+                    Kembali Ke <a href="index.php"
+                        class="text-blue-600 font-bold hover:text-blue-800 transition-colors">Beranda</a>
                 </p>
             </div>
         </div>

@@ -29,11 +29,11 @@ if ($cek > 0) {
     if ($data['role'] == "admin") {
         header("location:admin/index.php");
     } else if ($data['role'] == "pengajar") {
-        header("location:pengajar/index.php"); // Nanti kita buat foldernya
+        header("location:pengajar/index.php");
     } else if ($data['role'] == "walisantri") {
-        header("location:walisantri/index.php"); // Nanti kita buat foldernya
+        header("location:walisantri/index.php");
     } else if ($data['role'] == "pimpinan") {
-        header("location:pimpinan/index.php"); // Nanti kita buat foldernya
+        header("location:admin/index.php");
     } else {
         // Jika role tidak dikenali
         header("location:login.php?pesan=gagal");

@@ -5,7 +5,7 @@ if ($_SESSION['status'] != "sudah_login" || ($_SESSION['role'] != "admin" && $_S
     exit;
 }
 require_once '../koneksi.php';
-
+$role_user = $_SESSION['role'];
 // ========================================================
 // LOGIKA WAKTU UNTUK UCAPAN
 // ========================================================
@@ -207,44 +207,46 @@ include '../components/header.php';
                         ?>
                     </div>
                 </div>
+                <?php if ($role_user === 'admin') {
 
-                <div class="bg-gradient-to-b from-blue-800 to-blue-900 rounded-2xl shadow-sm p-6 text-white">
-                    <h3 class="font-bold mb-4 flex items-center gap-2"><i class="fas fa-bolt text-yellow-400"></i> Akses
-                        Cepat</h3>
-                    <div class="grid grid-cols-2 gap-3">
-                        <a href="kelola_santri.php"
-                            class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
-                            <i
-                                class="fas fa-user-graduate text-blue-400 mb-2 text-xl group-hover:scale-110 transition"></i>
-                            <p class="text-xs font-medium">Santri</p>
-                        </a>
-                        <a href="kelola_jadwal.php"
-                            class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
-                            <i
-                                class="fas fa-calendar-alt text-emerald-400 mb-2 text-xl group-hover:scale-110 transition"></i>
-                            <p class="text-xs font-medium">Jadwal</p>
-                        </a>
-                        <a href="kelola_akademik.php"
-                            class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
-                            <i
-                                class="fas fa-book-open text-amber-400 mb-2 text-xl group-hover:scale-110 transition"></i>
-                            <p class="text-xs font-medium">Raport</p>
-                        </a>
-                        <a href="kelola_user.php"
-                            class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
-                            <i
-                                class="fas fa-users-cog text-purple-400 mb-2 text-xl group-hover:scale-110 transition"></i>
-                            <p class="text-xs font-medium">Akun</p>
-                        </a>
+                ?>
+                    <div class="bg-gradient-to-b from-blue-800 to-blue-900 rounded-2xl shadow-sm p-6 text-white">
+                        <h3 class="font-bold mb-4 flex items-center gap-2"><i class="fas fa-bolt text-yellow-400"></i> Akses
+                            Cepat</h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="kelola_santri.php"
+                                class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
+                                <i
+                                    class="fas fa-user-graduate text-blue-400 mb-2 text-xl group-hover:scale-110 transition"></i>
+                                <p class="text-xs font-medium">Santri</p>
+                            </a>
+                            <a href="kelola_jadwal.php"
+                                class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
+                                <i
+                                    class="fas fa-calendar-alt text-emerald-400 mb-2 text-xl group-hover:scale-110 transition"></i>
+                                <p class="text-xs font-medium">Jadwal</p>
+                            </a>
+                            <a href="kelola_akademik.php"
+                                class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
+                                <i
+                                    class="fas fa-book-open text-amber-400 mb-2 text-xl group-hover:scale-110 transition"></i>
+                                <p class="text-xs font-medium">Raport</p>
+                            </a>
+                            <a href="kelola_user.php"
+                                class="bg-blue-700/50 hover:bg-blue-700 border border-blue-600 p-3 rounded-xl text-center transition group">
+                                <i
+                                    class="fas fa-users-cog text-purple-400 mb-2 text-xl group-hover:scale-110 transition"></i>
+                                <p class="text-xs font-medium">Akun</p>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
+                <?php } ?>
             </div>
         </div>
 
         <div class="mt-8 pt-4 border-t border-gray-200 text-center text-sm text-gray-500">
             &copy; <?php echo date('Y'); ?> Sistem Informasi Akademik & Keuangan. Dibuat dengan <i
-                class="fas fa-heart text-red-500 mx-1"></i> untuk sekolah.
+                class="fas fa-heart text-red-500 mx-1"></i> untuk Pondok.
         </div>
 
     </main>

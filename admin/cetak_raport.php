@@ -1,8 +1,7 @@
 <?php
 session_start();
-if ($_SESSION['status'] != "sudah_login" || $_SESSION['role'] != "admin") {
-    header("location:../login.php?pesan=belum_login");
-    exit;
+if ($_SESSION['status'] != "sudah_login" || !in_array($_SESSION['role'], ['admin', 'pimpinan'])) {
+    die("Akses Ditolak.");
 }
 require_once '../koneksi.php';
 
@@ -54,12 +53,12 @@ $sikap = mysqli_fetch_assoc($q_sikap);
     <title>Raport - <?php echo htmlspecialchars($santri['nama_santri']); ?></title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
         /* Pengaturan Khusus untuk Print A4 */
         body {
             background-color: #f3f4f6;
-            /* Abu-abu untuk layar */
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
         }
@@ -90,7 +89,6 @@ $sikap = mysqli_fetch_assoc($q_sikap);
                 display: none !important;
             }
 
-            /* Menghindari baris tabel terpotong di tengah saat pindah halaman */
             tr {
                 page-break-inside: avoid;
             }
@@ -113,11 +111,22 @@ $sikap = mysqli_fetch_assoc($q_sikap);
 
     <div class="kertas-a4 relative">
 
-        <div class="border-b-4 border-double border-gray-900 pb-4 mb-6 text-center">
-            <h1 class="text-2xl font-extrabold uppercase tracking-wide">SMK Negeri 1 Slawi</h1>
-            <h2 class="text-lg font-bold uppercase mt-1">Program Keahlian Rekayasa Perangkat Lunak (RPL)</h2>
-            <p class="text-xs mt-2">Jl. KH. Agus Salim, Slawi, Kabupaten Tegal, Jawa Tengah 52419</p>
-            <p class="text-xs">Website: smkn1slawi.sch.id | Email: info@smkn1slawi.sch.id</p>
+        <div class="flex items-center justify-center pb-4 mb-6 border-b-4 border-double border-green-600">
+            <div class="w-24 h-24 mr-6 shrink-0">
+                <img src="../uploads/img/Logo_AlFalah.png" alt="Logo Al Falah" class="w-full h-full object-contain">
+            </div>
+            <div class="flex flex-col text-left">
+                <span class="font-bold text-2xl mb-1 text-green-600"
+                    style="font-family: 'Amiri', 'Traditional Arabic', serif;">مُؤَسَّسَةُ الفَلَاحِ لِلتَّرْبِيَةِ
+                    الإِسْلَامِيَّةِ</span>
+                <span class="font-semibold text-lg text-slate-800 tracking-wide">YAYASAN PONDOK PESANTREN &
+                    PENDIDIKAN</span>
+                <span class="font-extrabold text-3xl leading-tight text-green-600">AL FALAH SALAFIYAH JATIROKEH</span>
+                <span class="text-xs text-slate-600 mt-1">Jl. Raya Brebes - Purwokerto Desa Jatirokeh Kecamatan Songgom
+                    Kab. Brebes 52266</span>
+                <span class="text-xs text-slate-600">email : alfalahsalafyonline@gmail.com | telp/wa : 0857 2898
+                    1547</span>
+            </div>
         </div>
 
         <h3 class="text-center text-xl font-bold uppercase mb-8 underline underline-offset-4">Laporan Hasil Belajar
@@ -182,7 +191,6 @@ $sikap = mysqli_fetch_assoc($q_sikap);
                             $angka = $n['nilai_angka'];
                             $total_nilai += $angka;
 
-                            // Logika Predikat
                             if ($angka >= 90) {
                                 $predikat = 'A';
                             } elseif ($angka >= 80) {
@@ -262,7 +270,7 @@ $sikap = mysqli_fetch_assoc($q_sikap);
             </div>
 
             <div class="w-1/3">
-                <p class="mb-20">Slawi, <?php echo date('d F Y'); ?><br>Wali Kelas</p>
+                <p class="mb-20">Jatirokeh, <?php echo date('d F Y'); ?><br>Wali Kelas</p>
                 <p class="font-bold underline uppercase">..........................................</p>
                 <p class="text-xs">NIP. ..............................</p>
             </div>
@@ -277,13 +285,6 @@ $sikap = mysqli_fetch_assoc($q_sikap);
         </div>
 
     </div>
-
-    <script>
-        window.onload = function() {
-            // Uncomment baris di bawah ini kalau kamu mau begitu halamannya diklik, langsung nge-print otomatis
-            // window.print();
-        };
-    </script>
 </body>
 
 </html>
