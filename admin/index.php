@@ -244,10 +244,10 @@ include '../components/header.php';
             </div>
         </div>
 
-        <div class="mt-8 pt-4 border-t border-gray-200 text-center text-sm text-gray-500">
+        <!-- <div class="mt-8 pt-4 border-t border-gray-200 text-center text-sm text-gray-500">
             &copy; <?php echo date('Y'); ?> Sistem Informasi Akademik & Keuangan. Dibuat dengan <i
                 class="fas fa-heart text-red-500 mx-1"></i> untuk Pondok.
-        </div>
+        </div> -->
 
     </main>
 </div>

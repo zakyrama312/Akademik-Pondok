@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
 
-        .bg-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
+    .bg-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
     </style>
 </head>
 
@@ -185,8 +185,9 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                        <h4 class="text-lg font-bold text-white mb-1">Setoran Hafalan Al-Qur'an</h4>
-                        <p class="text-xs text-emerald-200">Kajian rutin ba'da Shubuh bersama Asatidz.</p>
+                        <h4 class="text-lg font-bold text-white mb-1">Pembacaan Maulid & Sholawat</h4>
+                        <p class="text-xs text-emerald-200">Memupuk mahabbah kepada Rasulullah melalui kegiatan rutinan
+                            pembacaan Maulid Nabi.</p>
                     </div>
                 </div>
 
@@ -196,8 +197,9 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                        <h4 class="text-lg font-bold text-white mb-1">Pelajaran Kejuruan SMK</h4>
-                        <p class="text-xs text-blue-200">Santri mengasah skill pemrograman di Lab Komputer.</p>
+                        <h4 class="text-lg font-bold text-white mb-1">Pengajian Akbar & Haul</h4>
+                        <p class="text-xs text-blue-200">Keterlibatan santri dalam peringatan Haul Massal dan
+                            silaturahmi warga Jatirokeh.</p>
                     </div>
                 </div>
 
@@ -207,8 +209,9 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                        <h4 class="text-lg font-bold text-white mb-1">Ibadah Sholat Lima Waktu</h4>
-                        <p class="text-xs text-emerald-200">Membiasakan sholat berjamaah di Masjid Pondok.</p>
+                        <h4 class="text-lg font-bold text-white mb-1">Ekstrakurikuler Pagar Nusa</h4>
+                        <p class="text-xs text-emerald-200">Membentuk fisik yang tangguh dan karakter ksatria melalui
+                            seni bela diri pencak silat.</p>
                     </div>
                 </div>
 
@@ -218,8 +221,9 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                        <h4 class="text-lg font-bold text-white mb-1">Kegiatan Olahraga Sore</h4>
-                        <p class="text-xs text-amber-200">Futsal & Basket untuk menjaga kesehatan fisik.</p>
+                        <h4 class="text-lg font-bold text-white mb-1">Kajian & Doa Bersama</h4>
+                        <p class="text-xs text-amber-200">Momen khusyuk santriwati dalam kegiatan muhasabah dan
+                            pembinaan spiritual.</p>
                     </div>
                 </div>
 
@@ -229,8 +233,9 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                        <h4 class="text-lg font-bold text-white mb-1">Kebersamaan di Ruang Makan</h4>
-                        <p class="text-xs text-emerald-200">Tarbiyah adab makan dan minum sesuai sunnah.</p>
+                        <h4 class="text-lg font-bold text-white mb-1">Semarak Class Meeting</h4>
+                        <p class="text-xs text-emerald-200">Lomba tarik tambang untuk mempererat solidaritas,
+                            kekompakan, dan kebersamaan santri.</p>
                     </div>
                 </div>
 
@@ -240,11 +245,76 @@
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                        <h4 class="text-lg font-bold text-white mb-1">Mudzakarah (Belajar Mandiri)</h4>
-                        <p class="text-xs text-purple-200">Mengulang pelajaran sekolah & diniyah di asrama.</p>
+                        <h4 class="text-lg font-bold text-white mb-1">Rihlah & Ziarah Auliya</h4>
+                        <p class="text-xs text-purple-200">Kegiatan ziarah tokoh ulama untuk mengenang jasa pendahulu
+                            dan memperkuat iman.</p>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+    <section id="fasilitas" class="py-20 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Infrastruktur</h3>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4">Fasilitas Pondok</h2>
+                <p class="text-slate-600 text-lg">Lingkungan belajar yang asri, nyaman, dan didukung fasilitas memadai
+                    untuk menunjang kegiatan akademik maupun ubudiyah santri.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="uploads/fasilitas/gedung serbaguna.jpeg" alt="Gedung Serbaguna"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">Gedung Serbaguna Zawiyah At
+                            Tijani</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed">Gedung serbaguna yang digunakan untuk berbagai
+                            kegiatan akademik dan kegiatan keislaman.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="uploads/fasilitas/Asrama Putra.jpeg" alt="Asrama Putra"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-6 text-xl font-bold text-white">Asrama Putra</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed">Asrama putra yang dilengkapi fasilitas yang
+                            memadai untuk menunjang kegiatan belajar dan beribadah.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="uploads/fasilitas/gedung smp.jpeg" alt="Gedung SMP"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-6 text-xl font-bold text-white">Gedung SMP Bustanul Ulul NU
+                            Jatirokeh</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-slate-600 text-sm leading-relaxed">Gedung SMP yang dilengkapi fasilitas yang
+                            memadai untuk menunjang kegiatan belajar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="fasilitas/index.php"
+                    class="inline-flex items-center gap-2 bg-slate-800 hover:bg-emerald-600 text-white px-8 py-3.5 rounded-full font-bold transition shadow-lg group">
+                    Lihat Seluruh Fasilitas <i
+                        class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -298,9 +368,9 @@
                         <span class="font-extrabold text-xl tracking-tight text-white">Al Falah<span
                                 class="text-emerald-500"> Salafiyah</span></span>
                     </div>
-                    <p class="text-slate-400 leading-relaxed mb-6">Lembaga pendidikan Islam berbasisi teknologi yang
+                    <p class="text-slate-400 leading-relaxed mb-6">Lembaga pendidikan Islam berbasis teknologi yang
                         berkomitmen mencetak generasi unggul, berakhlak mulia, dan siap menghadapi tantangan global.</p>
-                    <div class="flex gap-4">
+                    <!-- <div class="flex gap-4">
                         <a href="#"
                             class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i
                                 class="fab fa-facebook-f"></i></a>
@@ -310,7 +380,7 @@
                         <a href="#"
                             class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i
                                 class="fab fa-youtube"></i></a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div>
