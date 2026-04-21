@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pondok Pesantren Al Falah Salafiyah</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="uploads/favicon/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
     body {
         font-family: 'Plus Jakarta Sans', sans-serif;
@@ -47,9 +53,8 @@
                 </div>
 
                 <div class="md:hidden flex items-center">
-                    <button class="text-slate-600 hover:text-emerald-600 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                    <button class="text-slate-600 hover:text-emerald-600 focus:outline-none"><i
+                            class="fas fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
@@ -71,8 +76,7 @@
                 </h1>
                 <p class="text-lg md:text-xl text-emerald-50/90 mb-10 leading-relaxed">
                     Yayasan Pondok Pesantren & Pendidikan Al Falah Salafiyah Jatirokeh memadukan kurikulum pendidikan
-                    formal dan ilmu agama Islam salaf untuk
-                    mencetak cendekiawan muslim yang tangguh.
+                    formal dan ilmu agama Islam salaf untuk mencetak cendekiawan muslim yang tangguh.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#program"
@@ -134,30 +138,25 @@
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 text-3xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-quran"></i>
-                    </div>
+                        <i class="fas fa-quran"></i></div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3">Tahfidzul Qur'an</h3>
                     <p class="text-slate-600 leading-relaxed">Program hafalan Al-Qur'an bersanad dengan target mutqin 30
                         juz, didampingi oleh musyrif/musyrifah berpengalaman.</p>
                 </div>
-
                 <div
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-book-open"></i>
-                    </div>
+                        <i class="fas fa-book-open"></i></div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3">Kajian Kitab Kuning</h3>
                     <p class="text-slate-600 leading-relaxed">Pendidikan Madrasah Diniyah yang mengkaji literatur Islam
                         klasik (Turats) seperti Nahwu, Shorof, Fiqih, dan Aqidah.</p>
                 </div>
-
                 <div
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
+                        <i class="fas fa-laptop-code"></i></div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3">Pendidikan Formal (SMK)</h3>
                     <p class="text-slate-600 leading-relaxed">Terintegrasi dengan SMK Kejuruan (RPL & Multimedia) agar
                         santri siap terjun sebagai tenaga ahli di industri teknologi.</p>
@@ -165,6 +164,7 @@
             </div>
         </div>
     </section>
+
     <section id="galeri" class="py-20 bg-white relative overflow-hidden">
         <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-50 rounded-full blur-3xl opacity-60"></div>
         <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-50 rounded-full blur-3xl opacity-60"></div>
@@ -178,10 +178,9 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
                 <div
                     class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 aspect-[4/3]">
-                    <img src="uploads/img/kegiatan/abb.jpg" alt="Kajian Sore"
+                    <img src="uploads/img/kegiatan/abb.jpg" alt="Kajian Sore" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -193,7 +192,7 @@
 
                 <div
                     class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 aspect-[4/3]">
-                    <img src="uploads/img/kegiatan/iksab.jpg" alt="Kelas SMK"
+                    <img src="uploads/img/kegiatan/iksab.jpg" alt="Kelas SMK" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -205,7 +204,7 @@
 
                 <div
                     class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 aspect-[4/3]">
-                    <img src="uploads/img/kegiatan/pn.jpg" alt="Salat Jamaah"
+                    <img src="uploads/img/kegiatan/pn.jpg" alt="Salat Jamaah" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -217,7 +216,7 @@
 
                 <div
                     class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 aspect-[4/3]">
-                    <img src="uploads/img/kegiatan/putri.jpg" alt="Ekstrakurikuler Bola"
+                    <img src="uploads/img/kegiatan/putri.jpg" alt="Ekstrakurikuler Bola" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -229,7 +228,7 @@
 
                 <div
                     class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 aspect-[4/3]">
-                    <img src="uploads/img/kegiatan/ttb.jpg" alt="Makan Bersama"
+                    <img src="uploads/img/kegiatan/ttb.jpg" alt="Makan Bersama" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -241,7 +240,7 @@
 
                 <div
                     class="relative overflow-hidden rounded-3xl group cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 aspect-[4/3]">
-                    <img src="uploads/img/kegiatan/ziaroh.jpg" alt="Belajar Mandiri"
+                    <img src="uploads/img/kegiatan/ziaroh.jpg" alt="Belajar Mandiri" loading="lazy"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
@@ -254,6 +253,7 @@
             </div>
         </div>
     </section>
+
     <section id="fasilitas" class="py-20 bg-slate-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -267,7 +267,7 @@
                 <div
                     class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="uploads/fasilitas/gedung serbaguna.jpeg" alt="Gedung Serbaguna"
+                        <img src="uploads/fasilitas/gedung serbaguna.jpeg" alt="Gedung Serbaguna" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                         <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">Gedung Serbaguna Zawiyah At
@@ -282,7 +282,7 @@
                 <div
                     class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="uploads/fasilitas/Asrama Putra.jpeg" alt="Asrama Putra"
+                        <img src="uploads/fasilitas/Asrama Putra.jpeg" alt="Asrama Putra" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                         <h3 class="absolute bottom-4 left-6 text-xl font-bold text-white">Asrama Putra</h3>
@@ -296,7 +296,7 @@
                 <div
                     class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
                     <div class="h-56 overflow-hidden relative">
-                        <img src="uploads/fasilitas/gedung smp.jpeg" alt="Gedung SMP"
+                        <img src="uploads/fasilitas/gedung smp.jpeg" alt="Gedung SMP" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                         <h3 class="absolute bottom-4 left-6 text-xl font-bold text-white">Gedung SMP Bustanul Ulul NU
@@ -318,6 +318,7 @@
             </div>
         </div>
     </section>
+
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col lg:flex-row relative shadow-2xl">
@@ -370,17 +371,6 @@
                     </div>
                     <p class="text-slate-400 leading-relaxed mb-6">Lembaga pendidikan Islam berbasis teknologi yang
                         berkomitmen mencetak generasi unggul, berakhlak mulia, dan siap menghadapi tantangan global.</p>
-                    <!-- <div class="flex gap-4">
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="#"
-                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition"><i
-                                class="fab fa-youtube"></i></a>
-                    </div> -->
                 </div>
 
                 <div>
