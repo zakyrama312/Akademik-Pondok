@@ -32,17 +32,22 @@ $role_user = $_SESSION['role']; // Ambil role yang login ('admin' atau 'pimpinan
     }
 </style>
 <aside
-    class="bg-slate-900 w-64 min-h-screen flex flex-col shadow-2xl transition-transform transform -translate-x-full md:translate-x-0 md:static fixed z-20"
+    class="bg-slate-900 w-64 h-screen flex flex-col shadow-2xl transition-transform transform -translate-x-full md:translate-x-0 md:static fixed top-0 left-0 z-50"
     id="sidebar">
 
-    <div class="flex items-center justify-center h-20 border-b border-slate-800/60 mt-2">
+    <div
+        class="flex items-center justify-between md:justify-center h-20 border-b border-slate-800/60 mt-2 px-4 md:px-0">
         <div class="flex items-center gap-3">
             <div
-                class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 text-white">
-                <i class="fas fa-graduation-cap text-xl"></i>
+                class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30 text-white">
+                <img src="../uploads/img/Logo_AlFalah.png" class="" alt="Logo">
             </div>
-            <h1 class="text-2xl font-extrabold text-white tracking-wider">AKADEMIK</h1>
+            <p class="text-sm font-extrabold text-white tracking-wider">Al-Falah Salafiyah</p>
         </div>
+
+        <button class="close-sidebar-btn md:hidden text-slate-400 hover:text-red-400 focus:outline-none p-2">
+            <i class="fas fa-times text-xl"></i>
+        </button>
     </div>
 
     <div class="px-4 py-6 overflow-y-auto flex-grow custom-scrollbar">

@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <style>
-    body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
     </style>
 </head>
 
@@ -28,8 +28,8 @@
                             class="text-emerald-600"> Salafiyah</span></span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.php#profil"
-                        class="text-slate-600 hover:text-emerald-600 font-medium transition">Profil</a>
+                    <!-- <a href="../index.php#profil"
+                        class="text-slate-600 hover:text-emerald-600 font-medium transition">Profil</a> -->
                     <a href="../index.php#program"
                         class="text-slate-600 hover:text-emerald-600 font-medium transition">Program Unggulan</a>
                     <a href="../index.php#galeri"
@@ -76,22 +76,22 @@
 
                 foreach ($fasilitas as $f):
                 ?>
-                <div
-                    class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="<?php echo $f['img']; ?>" alt="<?php echo $f['nama']; ?>"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
+                        class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="<?php echo $f['img']; ?>" alt="<?php echo $f['nama']; ?>"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                        </div>
+                        <div class="p-6 border-t-4 border-emerald-500">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center justify-between">
+                                <?php echo $f['nama']; ?>
+                                <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
+                            </h3>
                         </div>
                     </div>
-                    <div class="p-6 border-t-4 border-emerald-500">
-                        <h3 class="text-xl font-bold text-slate-800 flex items-center justify-between">
-                            <?php echo $f['nama']; ?>
-                            <i class="fas fa-check-circle text-emerald-500 text-sm"></i>
-                        </h3>
-                    </div>
-                </div>
                 <?php endforeach; ?>
             </div>
 

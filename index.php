@@ -29,7 +29,7 @@
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <img src="uploads/img/Logo_AlFalah.png" alt="Logo Al Falah"
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#profil" class="text-slate-600 hover:text-emerald-600 font-medium transition">Profil</a>
+                    <!-- <a href="#profil" class="text-slate-600 hover:text-emerald-600 font-medium transition">Profil</a> -->
                     <a href="#program" class="text-slate-600 hover:text-emerald-600 font-medium transition">Program
                         Unggulan</a>
                     <a href="#galeri" class="text-slate-600 hover:text-emerald-600 font-medium transition">Galeri</a>
@@ -53,8 +53,29 @@
                 </div>
 
                 <div class="md:hidden flex items-center">
-                    <button class="text-slate-600 hover:text-emerald-600 focus:outline-none"><i
-                            class="fas fa-bars text-2xl"></i></button>
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-emerald-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-t border-slate-100 shadow-xl pb-6 pt-2 rounded-b-3xl transform origin-top transition-transform duration-300">
+                <div class="flex flex-col px-6 space-y-4">
+                    <!-- <a href="#profil"
+                        class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Profil</a> -->
+                    <a href="#program"
+                        class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Program
+                        Unggulan</a>
+                    <a href="#galeri"
+                        class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Galeri</a>
+                    <a href="#fasilitas"
+                        class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Fasilitas</a>
+
+                    <a href="login.php"
+                        class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-bold transition flex items-center justify-center gap-2 mt-4 shadow-lg shadow-emerald-500/30">
+                        <i class="fas fa-sign-in-alt"></i> Portal Login
+                    </a>
                 </div>
             </div>
         </div>
@@ -138,7 +159,8 @@
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 text-3xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-quran"></i></div>
+                        <i class="fas fa-quran"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3">Tahfidzul Qur'an</h3>
                     <p class="text-slate-600 leading-relaxed">Program hafalan Al-Qur'an bersanad dengan target mutqin 30
                         juz, didampingi oleh musyrif/musyrifah berpengalaman.</p>
@@ -147,7 +169,8 @@
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                        <i class="fas fa-book-open"></i></div>
+                        <i class="fas fa-book-open"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3">Kajian Kitab Kuning</h3>
                     <p class="text-slate-600 leading-relaxed">Pendidikan Madrasah Diniyah yang mengkaji literatur Islam
                         klasik (Turats) seperti Nahwu, Shorof, Fiqih, dan Aqidah.</p>
@@ -156,7 +179,8 @@
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                        <i class="fas fa-laptop-code"></i></div>
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3 class="text-xl font-bold text-slate-800 mb-3">Pendidikan Formal (SMK)</h3>
                     <p class="text-slate-600 leading-relaxed">Terintegrasi dengan SMK Kejuruan (RPL & Multimedia) agar
                         santri siap terjun sebagai tenaga ahli di industri teknologi.</p>
@@ -376,8 +400,8 @@
                 <div>
                     <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Tautan Cepat</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
-                                    class="fas fa-angle-right text-xs"></i> Pendaftaran Santri</a></li>
+                        <!-- <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-right text-xs"></i> Pendaftaran Santri</a></li> -->
                         <li><a href="#galeri" class="hover:text-emerald-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-right text-xs"></i> Galeri Kegiatan</a></li>
                         <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
@@ -413,6 +437,37 @@
             </div>
         </div>
     </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const icon = btn.querySelector('i');
+
+        // Fungsi buka/tutup menu
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+
+            // Ganti ikon dari bars (garis 3) ke times (silang)
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Otomatis tutup menu kalau link diklik (Biar UX-nya bagus)
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    });
+    </script>
 
 </body>
 
