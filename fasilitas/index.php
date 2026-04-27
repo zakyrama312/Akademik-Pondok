@@ -66,11 +66,11 @@
                     ['nama' => 'Asrama Putra', 'img' => '../uploads/fasilitas/Asrama Putra.jpeg'],
                     ['nama' => 'Asrama Putra Tahfidz', 'img' => '../uploads/fasilitas/asrama putra tahfidz.jpeg'],
                     ['nama' => 'Gedung Serbaguna Zawiyah At Tijani', 'img' => '../uploads/fasilitas/gedung serbaguna.jpeg'],
-                    ['nama' => 'Gedung SMP 1', 'img' => '../uploads/fasilitas/gedung smp.jpeg'],
-                    ['nama' => 'Gedung SMP 2 SMP Bustanul Ulul NU Jatirokeh', 'img' => '../uploads/fasilitas/gedung smp 2.jpeg'],
+                    ['nama' => 'Gedung SMK Bhakti Utama NU Songgom', 'img' => '../uploads/fasilitas/SMK Bhakti Utama NU Songgom.jpeg'],
+                    ['nama' => 'Gedung SMP Bustanul Ulul NU Jatirokeh', 'img' => '../uploads/fasilitas/gedung smp 2.jpeg'],
                     ['nama' => 'Balai Latihan Kerja Komunitas', 'img' => '../uploads/fasilitas/BLKK.jpeg'],
                     ['nama' => 'Asrama Putri 1', 'img' => '../uploads/fasilitas/asrama putri.jpeg'],
-                    ['nama' => 'Asrama Putri 2', 'img' => '../uploads/fasilitas/asrama putri 2.jpeg'],
+                    ['nama' => 'Asrama Tahfidz Putri  Dan Masjid Auliya', 'img' => '../uploads/fasilitas/asrama putri 2 dan masjid auliya.jpeg'],
                     ['nama' => 'Asrama Putri 3', 'img' => '../uploads/fasilitas/asrama putri 3.jpeg']
                 ];
 
