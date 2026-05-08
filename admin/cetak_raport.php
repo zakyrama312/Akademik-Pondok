@@ -111,26 +111,12 @@ $sikap = mysqli_fetch_assoc($q_sikap);
 
     <div class="kertas-a4 relative">
 
-        <div class="flex items-center justify-center pb-4 mb-6 border-b-4 border-double border-green-600">
-            <div class="w-24 h-24 mr-6 shrink-0">
-                <img src="../uploads/img/Logo_AlFalah.png" alt="Logo Al Falah" class="w-full h-full object-contain">
-            </div>
-            <div class="flex flex-col text-left">
-                <span class="font-bold text-2xl mb-1 text-green-600"
-                    style="font-family: 'Amiri', 'Traditional Arabic', serif;">مُؤَسَّسَةُ الفَلَاحِ لِلتَّرْبِيَةِ
-                    الإِسْلَامِيَّةِ</span>
-                <span class="font-semibold text-lg text-slate-800 tracking-wide">YAYASAN PONDOK PESANTREN &
-                    PENDIDIKAN</span>
-                <span class="font-extrabold text-3xl leading-tight text-green-600">AL FALAH SALAFIYAH JATIROKEH</span>
-                <span class="text-xs text-slate-600 mt-1">Jl. Raya Brebes - Purwokerto Desa Jatirokeh Kecamatan Songgom
-                    Kab. Brebes 52266</span>
-                <span class="text-xs text-slate-600">email : alfalahsalafyonline@gmail.com | telp/wa : 0857 2898
-                    1547</span>
-            </div>
+        <div class="w-full mb-6 border-b-2 border-gray-800 pb-2">
+            <img src="../uploads/img/kopsurat.jpeg" alt="Kop Surat Al Falah" class="w-full h-auto">
         </div>
 
         <h3 class="text-center text-xl font-bold uppercase mb-8 underline underline-offset-4">Laporan Hasil Belajar
-            Santri / Siswa</h3>
+            Santri</h3>
 
         <div class="flex justify-between mb-6">
             <table class="w-1/2">
@@ -145,7 +131,7 @@ $sikap = mysqli_fetch_assoc($q_sikap);
                     <td><?php echo htmlspecialchars($santri['nis']); ?></td>
                 </tr>
                 <tr>
-                    <td class="py-1 font-semibold">Nama Orang Tua</td>
+                    <td class="py-1 font-semibold">Nama Walisantri</td>
                     <td>:</td>
                     <td><?php echo htmlspecialchars($santri['nama_ayah'] ?: '-'); ?></td>
                 </tr>
@@ -263,7 +249,7 @@ $sikap = mysqli_fetch_assoc($q_sikap);
 
         <div class="flex justify-between text-center mt-12 px-8 break-inside-avoid">
             <div class="w-1/3">
-                <p class="mb-20">Mengetahui,<br>Orang Tua / Wali Santri</p>
+                <p class="mb-20">Mengetahui,<br>Wali Santri</p>
                 <p class="font-bold underline uppercase">
                     <?php echo htmlspecialchars($santri['nama_ayah'] ?: '..........................................'); ?>
                 </p>
@@ -278,9 +264,9 @@ $sikap = mysqli_fetch_assoc($q_sikap);
 
         <div class="flex justify-center text-center mt-12 break-inside-avoid">
             <div class="w-1/3">
-                <p class="mb-20">Mengesahkan,<br>Kepala Sekolah / Mudir</p>
+                <p class="mb-20">Mengesahkan,<br>Mudir Madrasah</p>
                 <p class="font-bold underline uppercase">..........................................</p>
-                <p class="text-xs">NIP. ..............................</p>
+                <!-- <p class="text-xs">NIP. ..............................</p> -->
             </div>
         </div>
 

@@ -16,13 +16,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-    body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
 
-    .bg-pattern {
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
     </style>
 </head>
 
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <!-- <a href="#profil" class="text-slate-600 hover:text-emerald-600 font-medium transition">Profil</a> -->
+                    <a href="#profil" class="text-slate-600 hover:text-emerald-600 font-medium transition">Profil</a>
                     <a href="#program" class="text-slate-600 hover:text-emerald-600 font-medium transition">Program
                         Unggulan</a>
                     <a href="#galeri" class="text-slate-600 hover:text-emerald-600 font-medium transition">Galeri</a>
@@ -62,8 +62,8 @@
             <div id="mobile-menu"
                 class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-t border-slate-100 shadow-xl pb-6 pt-2 rounded-b-3xl transform origin-top transition-transform duration-300">
                 <div class="flex flex-col px-6 space-y-4">
-                    <!-- <a href="#profil"
-                        class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Profil</a> -->
+                    <a href="#profil"
+                        class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Profil</a>
                     <a href="#program"
                         class="mobile-link text-slate-600 font-medium hover:text-emerald-600 py-2 border-b border-slate-50">Program
                         Unggulan</a>
@@ -124,9 +124,9 @@
 
     <section class="relative z-20 -mt-16 md:-mt-24 mb-16 max-w-5xl mx-auto px-4 sm:px-6">
         <div
-            class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100">
+            class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100 border border-slate-50">
             <div class="text-center">
-                <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">500+</div>
+                <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">1000+</div>
                 <p class="text-slate-500 font-medium text-sm uppercase tracking-wide">Santri Aktif</p>
             </div>
             <div class="text-center">
@@ -138,9 +138,76 @@
                 <p class="text-slate-500 font-medium text-sm uppercase tracking-wide">Program Ekstra</p>
             </div>
             <div class="text-center">
-                <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">10<span class="text-xl">Ha</span>
-                </div>
+                <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">10<span
+                        class="text-xl font-bold">Ha</span></div>
                 <p class="text-slate-500 font-medium text-sm uppercase tracking-wide">Luas Area</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="profil" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div
+                            class="rounded-3xl overflow-hidden shadow-lg border-4 border-white transform hover:scale-105 transition duration-500">
+                            <img src="uploads/img/pengasuh.png" alt="Pengasuh Pondok" class="w-full h-64 object-cover"
+                                title="Pengasuh Pondok Pesantren">
+                        </div>
+                        <div class="bg-emerald-600 rounded-3xl p-6 text-white shadow-xl">
+                            <p class="text-3xl font-extrabold">1984</p>
+                            <p class="text-sm opacity-90 uppercase tracking-wider">Tahun Berdiri</p>
+                        </div>
+                    </div>
+                    <div class="pt-12 space-y-4">
+                        <div class="bg-blue-600 rounded-3xl p-6 text-white shadow-xl">
+                            <p class="text-3xl font-extrabold">1000+</p>
+                            <p class="text-sm opacity-90 uppercase tracking-wider">Total Santri</p>
+                        </div>
+                        <div
+                            class="rounded-3xl overflow-hidden shadow-lg border-4 border-white transform hover:scale-105 transition duration-500">
+                            <img src="uploads/img/keluarga.png" alt="Keluarga Besar" class="w-full h-64 object-cover"
+                                title="Keluarga Besar Pondok">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <h3 class="text-emerald-600 font-bold uppercase tracking-widest text-sm mb-2">Profil Singkat</h3>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-6 leading-tight">Sejarah & Khidmah
+                        Al Falah Salafiyah</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed text-justify italic font-medium">
+                        "Mencetak Generasi Khoiru Ummat, Mendidik Dan Mempersiapkan Santri Untuk Menjadi Manusia Mandiri
+                        dan Berkhidmah kepada Masyarakat, Agama, Nusa, Dan Bangsa"
+                    </p>
+                    <p class="text-slate-600 mb-8 leading-relaxed text-justify">
+                        Didirikan pada tahun 1984 oleh KH. Tarsudi bersama putra-putranya, Pesantren Al-Falah Salafiyah
+                        Jatirokeh telah tumbuh dari sekadar pengajian rutin menjadi pusat pendidikan Islam yang kokoh
+                        dengan ribuan santri. Kami memadukan sistem salaf klasik dengan pendidikan formal modern.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div
+                            class="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold">
+                            <i class="fas fa-check-circle"></i> Kitab Kuning
+                        </div>
+                        <div
+                            class="flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-bold">
+                            <i class="fas fa-check-circle"></i> Kurikulum Nasional
+                        </div>
+                        <div
+                            class="flex items-center gap-2 bg-amber-50 text-amber-700 px-4 py-2 rounded-full text-sm font-bold">
+                            <i class="fas fa-check-circle"></i> Tahfidzul Qur'an
+                        </div>
+                    </div>
+
+                    <a href="profil/index.php"
+                        class="inline-flex items-center gap-2 text-emerald-600 font-bold hover:text-emerald-700 transition group">
+                        Baca Sejarah Lengkap & Visi Misi
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -345,7 +412,8 @@
 
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col lg:flex-row relative shadow-2xl">
+            <div
+                class="bg-slate-900 rounded-[3rem] overflow-hidden flex flex-col lg:flex-row relative shadow-2xl border border-slate-800">
                 <div class="absolute inset-0 bg-pattern opacity-10"></div>
 
                 <div class="p-10 lg:p-16 lg:w-3/5 relative z-10 flex flex-col justify-center">
@@ -400,12 +468,10 @@
                 <div>
                     <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Tautan Cepat</h4>
                     <ul class="space-y-3">
-                        <!-- <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
-                                    class="fas fa-angle-right text-xs"></i> Pendaftaran Santri</a></li> -->
+                        <li><a href="#profil" class="hover:text-emerald-400 transition flex items-center gap-2"><i
+                                    class="fas fa-angle-right text-xs"></i> Profil Pondok</a></li>
                         <li><a href="#galeri" class="hover:text-emerald-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-right text-xs"></i> Galeri Kegiatan</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition flex items-center gap-2"><i
-                                    class="fas fa-angle-right text-xs"></i> Berita & Artikel</a></li>
                         <li><a href="login.php" class="hover:text-emerald-400 transition flex items-center gap-2"><i
                                     class="fas fa-angle-right text-xs"></i> Portal Sistem</a></li>
                     </ul>
@@ -437,36 +503,30 @@
             </div>
         </div>
     </footer>
+
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-        const icon = btn.querySelector('i');
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const icon = btn.querySelector('i');
 
-        // Fungsi buka/tutup menu
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                } else {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                }
+            });
 
-            // Ganti ikon dari bars (garis 3) ke times (silang)
-            if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            }
-        });
-
-        // Otomatis tutup menu kalau link diklik (Biar UX-nya bagus)
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.replace('fa-times', 'fa-bars');
+                });
             });
         });
-    });
     </script>
 
 </body>

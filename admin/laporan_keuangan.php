@@ -85,7 +85,7 @@ include '../components/header.php';
             </div>
 
             <div class="p-6">
-                <form method="GET" action="laporan.php" class="flex flex-col md:flex-row gap-4 items-end">
+                <form method="GET" action="laporan_keuangan.php" class="flex flex-col md:flex-row gap-4 items-end">
                     <div class="w-full md:w-auto">
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Dari Tanggal</label>
                         <input type="date" name="mulai" value="<?php echo $tgl_mulai; ?>" required

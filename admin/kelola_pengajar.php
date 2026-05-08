@@ -10,7 +10,7 @@ require_once '../koneksi.php';
 // 1. PROSES TAMBAH DATA GURU & USER AKUN
 // ========================================================
 if (isset($_POST['tambah_pengajar'])) {
-    $nip = mysqli_real_escape_string($koneksi, $_POST['nip']);
+    $alamat = mysqli_real_escape_string($koneksi, $_POST['alamat']);
     $nama = mysqli_real_escape_string($koneksi, $_POST['nama_pengajar']);
     $no_hp = mysqli_real_escape_string($koneksi, $_POST['no_hp']);
     $username = mysqli_real_escape_string($koneksi, $_POST['username']);
@@ -21,7 +21,7 @@ if (isset($_POST['tambah_pengajar'])) {
     if (mysqli_query($koneksi, $query_user)) {
         $id_user = mysqli_insert_id($koneksi);
         // Insert ke tabel pengajar
-        mysqli_query($koneksi, "INSERT INTO pengajar (id_user, nip, nama_pengajar, no_hp) VALUES ($id_user, '$nip', '$nama', '$no_hp')");
+        mysqli_query($koneksi, "INSERT INTO pengajar (id_user, alamat, nama_pengajar, no_hp) VALUES ($id_user, '$alamat', '$nama', '$no_hp')");
         $_SESSION['pesan_sukses'] = "Berhasil! Data pengajar dan akun login telah dibuat.";
     } else {
         $_SESSION['pesan_error'] = "Gagal! Username mungkin sudah digunakan.";
@@ -36,12 +36,12 @@ if (isset($_POST['tambah_pengajar'])) {
 if (isset($_POST['edit_pengajar'])) {
     $id_pengajar = (int)$_POST['id_pengajar'];
     $id_user = (int)$_POST['id_user'];
-    $nip = mysqli_real_escape_string($koneksi, $_POST['nip']);
+    $alamat = mysqli_real_escape_string($koneksi, $_POST['alamat']);
     $nama = mysqli_real_escape_string($koneksi, $_POST['nama_pengajar']);
     $no_hp = mysqli_real_escape_string($koneksi, $_POST['no_hp']);
     $username = mysqli_real_escape_string($koneksi, $_POST['username']);
 
-    mysqli_query($koneksi, "UPDATE pengajar SET nip='$nip', nama_pengajar='$nama', no_hp='$no_hp' WHERE id_pengajar=$id_pengajar");
+    mysqli_query($koneksi, "UPDATE pengajar SET alamat='$alamat', nama_pengajar='$nama', no_hp='$no_hp' WHERE id_pengajar=$id_pengajar");
     mysqli_query($koneksi, "UPDATE users SET username='$username' WHERE id_user=$id_user");
 
     if (!empty($_POST['password'])) {
@@ -214,8 +214,8 @@ include '../components/header.php';
                                         <p class="font-bold text-gray-800">
                                             <?php echo htmlspecialchars($d['nama_pengajar']); ?>
                                         </p>
-                                        <p class="text-xs text-gray-500">NIP:
-                                            <?php echo $d['nip'] ? htmlspecialchars($d['nip']) : '-'; ?></p>
+                                        <p class="text-xs text-gray-500">Alamat:
+                                            <?php echo $d['alamat'] ? htmlspecialchars($d['alamat']) : '-'; ?></p>
                                     </div>
                                 </td>
                                 <td class="p-4 text-gray-600">
@@ -228,7 +228,7 @@ include '../components/header.php';
                                 <td class="p-4">
                                     <div class="flex items-center justify-center gap-2">
                                         <button
-                                            onclick="bukaModalEdit(<?php echo $d['id_pengajar']; ?>, <?php echo $d['id_user']; ?>, '<?php echo addslashes($d['nip']); ?>', '<?php echo addslashes($d['nama_pengajar']); ?>', '<?php echo addslashes($d['no_hp']); ?>', '<?php echo addslashes($d['username']); ?>')"
+                                            onclick="bukaModalEdit(<?php echo $d['id_pengajar']; ?>, <?php echo $d['id_user']; ?>, '<?php echo addslashes($d['alamat']); ?>', '<?php echo addslashes($d['nama_pengajar']); ?>', '<?php echo addslashes($d['no_hp']); ?>', '<?php echo addslashes($d['username']); ?>')"
                                             class="p-2 bg-amber-50 text-amber-600 hover:bg-amber-500 hover:text-white rounded-lg transition"
                                             title="Edit Data">
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -281,17 +281,16 @@ include '../components/header.php';
                                 type="text" name="nama_pengajar" required
                                 class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white">
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div><label class="block text-sm font-semibold text-gray-700 mb-1">NIP
-                                    (Opsional)</label><input type="text" name="nip"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white">
-                            </div>
-                            <div><label class="block text-sm font-semibold text-gray-700 mb-1">No.
-                                    Handphone</label><input type="text" name="no_hp"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white text-blue-600 font-bold">
-                            </div>
-                        </div>
+                        <div><label class="block text-sm font-semibold text-gray-700 mb-1">Alamat
+                                (Opsional)</label>
+                            <textarea name="alamat" id=""
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white"></textarea>
 
+                        </div>
+                        <div><label class="block text-sm font-semibold text-gray-700 mb-1">No.
+                                Handphone</label><input type="text" name="no_hp"
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white text-blue-600 font-bold">
+                        </div>
                         <div class="bg-blue-50 p-3 rounded-lg border border-blue-100 mt-6 mb-4">
                             <p class="text-xs text-blue-700 font-semibold uppercase tracking-wider">2. Akun Login Sistem
                             </p>
@@ -341,15 +340,14 @@ include '../components/header.php';
                                 type="text" name="nama_pengajar" id="input_edit_nama" required
                                 class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-amber-500 outline-none bg-gray-50 focus:bg-white">
                         </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div><label class="block text-sm font-semibold text-gray-700 mb-1">NIP
-                                    (Opsional)</label><input type="text" name="nip" id="input_edit_nip"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-amber-500 outline-none bg-gray-50 focus:bg-white">
-                            </div>
-                            <div><label class="block text-sm font-semibold text-gray-700 mb-1">No.
-                                    Handphone</label><input type="text" name="no_hp" id="input_edit_hp"
-                                    class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-amber-500 outline-none bg-gray-50 focus:bg-white font-bold">
-                            </div>
+                        <div><label class="block text-sm font-semibold text-gray-700 mb-1">Alamat
+                                (Opsional)</label>
+                            <textarea name="alamat" id="input_edit_alamat"
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-blue-500 outline-none bg-gray-50 focus:bg-white"></textarea>
+                        </div>
+                        <div><label class="block text-sm font-semibold text-gray-700 mb-1">No.
+                                Handphone</label><input type="text" name="no_hp" id="input_edit_hp"
+                                class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:border-amber-500 outline-none bg-gray-50 focus:bg-white font-bold">
                         </div>
 
                         <div class="bg-amber-50 p-3 rounded-lg border border-amber-100 mt-6 mb-4">
@@ -411,10 +409,10 @@ include '../components/header.php';
         setTimeout(() => modal.classList.add('opacity-0', 'pointer-events-none'), 200);
     }
 
-    function bukaModalEdit(id_pengajar, id_user, nip, nama, hp, username) {
+    function bukaModalEdit(id_pengajar, id_user, alamat, nama, hp, username) {
         document.getElementById('input_edit_id_pengajar').value = id_pengajar;
         document.getElementById('input_edit_id_user').value = id_user;
-        document.getElementById('input_edit_nip').value = nip;
+        document.getElementById('input_edit_alamat').value = alamat;
         document.getElementById('input_edit_nama').value = nama;
         document.getElementById('input_edit_hp').value = hp;
         document.getElementById('input_edit_username').value = username;
