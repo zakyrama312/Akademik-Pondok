@@ -124,7 +124,7 @@
 
     <section class="relative z-20 -mt-16 md:-mt-24 mb-16 max-w-5xl mx-auto px-4 sm:px-6">
         <div
-            class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-slate-100 border border-slate-50">
+            class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 grid grid-cols-2 md:grid-cols-3 gap-8 divide-x divide-slate-100 border border-slate-50">
             <div class="text-center">
                 <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">1000+</div>
                 <p class="text-slate-500 font-medium text-sm uppercase tracking-wide">Santri Aktif</p>
@@ -137,11 +137,11 @@
                 <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">12</div>
                 <p class="text-slate-500 font-medium text-sm uppercase tracking-wide">Program Ekstra</p>
             </div>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <div class="text-3xl md:text-4xl font-extrabold text-emerald-600 mb-1">10<span
                         class="text-xl font-bold">Ha</span></div>
                 <p class="text-slate-500 font-medium text-sm uppercase tracking-wide">Luas Area</p>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -246,11 +246,13 @@
                     class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group">
                     <div
                         class="w-16 h-16 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 text-3xl mb-6 group-hover:bg-amber-500 group-hover:text-white transition-colors">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-user-graduate"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Pendidikan Formal (SMK)</h3>
-                    <p class="text-slate-600 leading-relaxed">Terintegrasi dengan SMK Kejuruan (RPL & Multimedia) agar
-                        santri siap terjun sebagai tenaga ahli di industri teknologi.</p>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Pendidikan Formal (SMP, SMK)</h3>
+                    <p class="text-slate-600 leading-relaxed text-justify">
+                        Terintegrasi dengan lembaga SMP dan SMK Kejuruan unggulan (jurusan TKJ, TKR, & Farmasi) untuk
+                        mencetak lulusan terampil yang siap kerja di berbagai sektor industri dan kesehatan.
+                    </p>
                 </div>
             </div>
         </div>
@@ -486,7 +488,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-phone-alt text-emerald-500"></i>
-                            <span>0857 2898 1547</span>
+                            <span>085742906401</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope text-emerald-500"></i>

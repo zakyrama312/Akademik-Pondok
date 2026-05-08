@@ -254,18 +254,40 @@ $sikap = mysqli_fetch_assoc($q_sikap);
                     <?php echo htmlspecialchars($santri['nama_ayah'] ?: '..........................................'); ?>
                 </p>
             </div>
+            <?php
+            // Fungsi menyulap tanggal English/Default ke format Indonesia
+            function tanggal_indonesia($tanggal)
+            {
+                $bulan_indo = [
+                    1 => 'Januari',
+                    'Februari',
+                    'Maret',
+                    'April',
+                    'Mei',
+                    'Juni',
+                    'Juli',
+                    'Agustus',
+                    'September',
+                    'Oktober',
+                    'November',
+                    'Desember'
+                ];
 
+                $split = explode('-', date('Y-m-d', strtotime($tanggal)));
+                return $split[2] . ' ' . $bulan_indo[(int)$split[1]] . ' ' . $split[0];
+            }
+            ?>
             <div class="w-1/3">
-                <p class="mb-20">Jatirokeh, <?php echo date('d F Y'); ?><br>Wali Kelas</p>
+                <p class="mb-20">Jatirokeh, <?php echo tanggal_indonesia(date('Y-m-d')); ?><br>Wali Kelas</p>
                 <p class="font-bold underline uppercase">..........................................</p>
-                <p class="text-xs">NIP. ..............................</p>
+                <!-- <p class="text-xs">NIP. ..............................</p> -->
             </div>
         </div>
 
         <div class="flex justify-center text-center mt-12 break-inside-avoid">
             <div class="w-1/3">
                 <p class="mb-20">Mengesahkan,<br>Mudir Madrasah</p>
-                <p class="font-bold underline uppercase">..........................................</p>
+                <p class="font-bold underline uppercase">KH. YAZID NURIDDIN</p>
                 <!-- <p class="text-xs">NIP. ..............................</p> -->
             </div>
         </div>
