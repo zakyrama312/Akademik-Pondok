@@ -46,7 +46,6 @@ if ($format == 'excel') {
     <title><?php echo $judul; ?></title>
     <?php if ($format == 'pdf'): ?>
         <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -107,21 +106,8 @@ if ($format == 'excel') {
                 / Simpan PDF</button>
         </div>
 
-        <div class="flex items-center justify-center pb-6 mb-8 border-b-4 border-double border-green-600">
-            <div class="w-24 h-24 mr-6 shrink-0">
-                <img src="../uploads/img/Logo_AlFalah.png" alt="Logo" class="w-full h-full object-contain">
-            </div>
-            <div class="flex flex-col text-left">
-                <span class="font-bold text-2xl mb-1 text-green-600"
-                    style="font-family: 'Amiri', 'Traditional Arabic', serif;">مُؤَسَّسَةُ الفَلَاحِ لِلتَّرْبِيَةِ
-                    الإِسْلَامِيَّةِ</span>
-                <span class="font-semibold text-lg text-slate-800 tracking-wide">YAYASAN PONDOK PESANTREN &
-                    PENDIDIKAN</span>
-                <span class="font-extrabold text-3xl leading-tight text-green-600">AL FALAH SALAFIYAH JATIROKEH</span>
-                <span class="text-xs text-slate-600 mt-1">Jl. Raya Brebes - Purwokerto Desa Jatirokeh Kecamatan Songgom Kab.
-                    Brebes 52266</span>
-                <span class="text-xs text-slate-600">email : alfalahsalafyonline@gmail.com | telp/wa : 0857 2898 1547</span>
-            </div>
+        <div class="w-full mb-6 border-b-2 border-gray-800 pb-2">
+            <img src="../uploads/img/kopsurat.jpeg" alt="Kop Surat Al Falah" class="w-full h-auto">
         </div>
     <?php endif; ?>
 
@@ -201,8 +187,8 @@ if ($format == 'excel') {
 
     <?php if ($format == 'pdf'): ?>
         <div style="margin-top: 50px; text-align: right; float: right; width: 30%;">
-            <p style="margin-bottom: 70px;">Mengetahui,<br>Kepala Sekolah / Pimpinan</p>
-            <p style="font-weight: bold; text-decoration: underline;">........................................</p>
+            <p style="margin-bottom: 70px;">Mengetahui,<br>Mudir Madrasah</p>
+            <p style="font-weight: bold; text-decoration: underline;">KH. YAZID NURIDDIN</p>
         </div>
     <?php endif; ?>
 
