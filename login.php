@@ -25,8 +25,13 @@
         </div>
     </div>
 
-    <div class="w-full lg:w-1/2 flex items-center justify-center bg-white p-8 sm:p-12">
-        <div class="w-full max-w-md">
+    <div class="w-full lg:w-1/2 flex items-center justify-center bg-[url('uploads/img/depan_pondok_putri.jpg')] bg-cover bg-center relative lg:bg-none lg:bg-white p-4 sm:p-12">
+        
+        <!-- Overlay gelap tipis di mobile -->
+        <div class="absolute inset-0 bg-slate-900/40 lg:hidden"></div>
+
+        <!-- Glassmorphism Panel di Mobile -->
+        <div class="w-full max-w-md relative z-10 bg-white/70 backdrop-blur-xl border border-white/50 p-8 sm:p-10 rounded-3xl shadow-2xl lg:bg-transparent lg:backdrop-blur-none lg:border-none lg:p-0 lg:rounded-none lg:shadow-none">
 
             <div class="lg:hidden mb-8 text-center">
                 <img src="uploads/img/Logo_AlFalah.png" alt="Logo Pondok Putri"

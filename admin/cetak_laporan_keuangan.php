@@ -171,9 +171,19 @@ $q_laporan = mysqli_query($koneksi, $query);
     </table>
 
     <?php if ($format == 'pdf'): ?>
-        <div style="margin-top: 50px; text-align: right; float: right; width: 30%;">
-            <p style="margin-bottom: 70px;">Mengetahui,<br>Pengasuh</p>
-            <p style="font-weight: bold; text-decoration: underline;">KH. Mas Mansyur Tasryudi</p>
+        <?php 
+            $bulan_indo = array(1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
+            $tgl_indo = date('d') . ' ' . $bulan_indo[(int)date('m')] . ' ' . date('Y');
+        ?>
+        <div style="margin-top: 50px; width: 100%; display: table;">
+            <div style="display: table-cell; width: 50%; text-align: left; vertical-align: top;">
+                <p style="margin-bottom: 70px;">Brebes, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Bendahara</p>
+                <p style="font-weight: bold; text-decoration: underline;">Ahmad Ulil Abshar</p>
+            </div>
+            <div style="display: table-cell; width: 50%; text-align: right; vertical-align: top;">
+                <p style="margin-bottom: 70px;"><br>Mengetahui,<br>Pengasuh</p>
+                <p style="font-weight: bold; text-decoration: underline;">KH. Mas Mansyur Tasryudi</p>
+            </div>
         </div>
     <?php endif; ?>
 

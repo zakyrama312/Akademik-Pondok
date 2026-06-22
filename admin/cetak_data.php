@@ -76,6 +76,7 @@ if ($format == 'excel') {
                 padding: 8px !important;
                 text-align: left;
                 vertical-align: top;
+                font-size: 16px;
             }
 
             table th {
@@ -167,8 +168,8 @@ if ($format == 'excel') {
                 <tr>
                     <th width="5%">No</th>
                     <th width="30%">Nama Tenaga Pengajar</th>
-                    <th width="40%">Mata Pelajaran (Diampu)</th>
-                    <th width="25%">No HP / Kontak</th>
+                    <th width="45%">Mata Pelajaran (Diampu)</th>
+                    <th width="20%">No HP / Kontak</th>
                 </tr>
             </thead>
             <tbody>
@@ -186,9 +187,19 @@ if ($format == 'excel') {
     </table>
 
     <?php if ($format == 'pdf'): ?>
-        <div style="margin-top: 50px; text-align: right; float: right; width: 30%;">
-            <p style="margin-bottom: 70px;">Mengetahui,<br>Mudir Madrasah</p>
-            <p style="font-weight: bold; text-decoration: underline;">KH. YAZID NURIDDIN</p>
+        <?php 
+            $bulan_indo = array(1 => 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
+            $tgl_indo = date('d') . ' ' . $bulan_indo[(int)date('m')] . ' ' . date('Y');
+        ?>
+        <div style="margin-top: 50px; width: 100%; display: table;">
+            <div style="display: table-cell; width: 50%; text-align: left; vertical-align: top;">
+                <p style="margin-bottom: 70px;">Jatirokeh, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Pengasuh Pondok</p>
+                <p style="font-weight: bold; text-decoration: underline;">KH. Mas Mansyur Tasryudi</p>
+            </div>
+            <div style="display: table-cell; width: 50%; text-align: right; vertical-align: top;">
+                <p style="margin-bottom: 70px;"><br>Mengetahui,<br>Mudir Madrasah</p>
+                <p style="font-weight: bold; text-decoration: underline;">KH. YAZID NURIDDIN</p>
+            </div>
         </div>
     <?php endif; ?>
 
