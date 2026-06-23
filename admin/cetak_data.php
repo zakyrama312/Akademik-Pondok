@@ -192,13 +192,21 @@ if ($format == 'excel') {
             $tgl_indo = date('d') . ' ' . $bulan_indo[(int)date('m')] . ' ' . date('Y');
         ?>
         <div style="margin-top: 50px; width: 100%; display: table;">
-            <div style="display: table-cell; width: 50%; text-align: left; vertical-align: top;">
-                <p style="margin-bottom: 70px;">Jatirokeh, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Pengasuh Pondok</p>
-                <p style="font-weight: bold; text-decoration: underline;">KH. Mas Mansyur Tasryudi</p>
+            <div style="display: table-cell; width: 50%; vertical-align: top;">
+                <div style="width: 280px; text-align: left;">
+                    <br><br>Pengasuh Pondok
+                    <div style="margin-top: 70px;">
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. Mas Mansyur Tasryudi</p>
+                    </div>
+                </div>
             </div>
-            <div style="display: table-cell; width: 50%; text-align: right; vertical-align: top;">
-                <p style="margin-bottom: 70px;"><br>Mengetahui,<br>Mudir Madrasah</p>
-                <p style="font-weight: bold; text-decoration: underline;">KH. YAZID NURIDDIN</p>
+            <div style="display: table-cell; width: 50%; vertical-align: top;">
+                <div style="text-align: left; float: right; width: max-content;">
+                    Jatirokeh, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Mudir Madrasah
+                    <div style="margin-top: 70px;">
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. YAZID NURIDDIN</p>
+                    </div>
+                </div>
             </div>
         </div>
     <?php endif; ?>

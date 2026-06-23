@@ -355,8 +355,16 @@ include '../components/header.php';
                                             class="bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white px-3 py-1.5 rounded-lg text-xs font-bold transition border border-blue-200">
                                             <i class="fas fa-money-bill-wave mr-1"></i> Bayar Tunai
                                         </button>
+                                    <?php elseif ($t['status_tagihan'] == 'Lunas') :                        ?>
+                                        <!-- <span class="text-xs text-gray-400 italic">Selesai</span> -->
+                                        <a href="cetak_kuitansi.php?id=<?php echo $t['id_tagihan']; ?>" target="_blank"
+                                            class="p-2 bg-emerald-50 text-emerald-600 hover:bg-emerald-500 hover:text-white rounded-lg transition inline-flex items-center gap-1"
+                                            title="Cetak Kuitansi">
+                                            <i class="fas fa-print"></i>
+                                            <span class="text-xs font-semibold hidden sm:inline">Kuitansi</span>
+                                        </a>
                                     <?php else: ?>
-                                        <span class="text-xs text-gray-400 italic">Selesai</span>
+                                        <span class="text-xs text-gray-400 italic">Menunggu Pembayaran</span>
                                     <?php endif; ?>
                                 </td>
                             </tr>

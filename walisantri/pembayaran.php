@@ -37,7 +37,9 @@ if (isset($_POST['upload_bukti'])) {
 
                 if (move_uploaded_file($file_tmp, $path_tujuan)) {
                     // 1. Masukkan data ke tabel pembayaran
-                    mysqli_query($koneksi, "INSERT INTO pembayaran (id_tagihan, bukti_transfer, status_acc) VALUES ($id_tagihan, '$nama_file_baru', 'Pending')");
+
+                    $tanggal_sekarang = date('Y-m-d H:i:s');
+                    mysqli_query($koneksi, "INSERT INTO pembayaran (id_tagihan, tanggal_bayar, bukti_transfer, status_acc) VALUES ($id_tagihan, '$tanggal_sekarang', '$nama_file_baru', 'Pending')");
 
                     // 2. Ubah status tagihan jadi Menunggu Konfirmasi
                     mysqli_query($koneksi, "UPDATE tagihan SET status_tagihan='Menunggu Konfirmasi' WHERE id_tagihan=$id_tagihan");
@@ -299,7 +301,7 @@ include '../components/header.php';
             <div class="space-y-4">
                 <div class="bg-amber-50 border-l-4 border-amber-400 p-3 rounded-r-lg">
                     <p class="text-xs text-amber-700 font-medium">Silakan transfer ke rekening resmi sekolah:<br>
-                        <strong>BSI: 1234567890 (a.n SMK Negeri 1 Slawi)</strong>
+                        <strong>BRI: 0676 0100 1198 300 (a.n PONPES PENDIDIKAN AL FALAH SALAFY)</strong>
                     </p>
                 </div>
 

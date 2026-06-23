@@ -176,13 +176,21 @@ $q_laporan = mysqli_query($koneksi, $query);
             $tgl_indo = date('d') . ' ' . $bulan_indo[(int)date('m')] . ' ' . date('Y');
         ?>
         <div style="margin-top: 50px; width: 100%; display: table;">
-            <div style="display: table-cell; width: 50%; text-align: left; vertical-align: top;">
-                <p style="margin-bottom: 70px;">Brebes, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Bendahara</p>
-                <p style="font-weight: bold; text-decoration: underline;">Ahmad Ulil Abshar</p>
+            <div style="display: table-cell; width: 50%; vertical-align: top;">
+                <div style="width: 280px; text-align: left;">
+                    <br><br>Bendahara
+                    <div style="margin-top: 70px;">
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">Ahmad Ulil Abshar</p>
+                    </div>
+                </div>
             </div>
-            <div style="display: table-cell; width: 50%; text-align: right; vertical-align: top;">
-                <p style="margin-bottom: 70px;"><br>Mengetahui,<br>Pengasuh</p>
-                <p style="font-weight: bold; text-decoration: underline;">KH. Mas Mansyur Tasryudi</p>
+            <div style="display: table-cell; width: 50%; vertical-align: top;">
+                <div style="text-align: left; float: right; width: max-content;">
+                    Brebes, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Pengasuh
+                    <div style="margin-top: 70px;">
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. Mas Mansyur Tasryudi</p>
+                    </div>
+                </div>
             </div>
         </div>
     <?php endif; ?>

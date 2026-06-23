@@ -31,7 +31,7 @@
         <div class="absolute inset-0 bg-slate-900/40 lg:hidden"></div>
 
         <!-- Glassmorphism Panel di Mobile -->
-        <div class="w-full max-w-md relative z-10 bg-white/70 backdrop-blur-xl border border-white/50 p-8 sm:p-10 rounded-3xl shadow-2xl lg:bg-transparent lg:backdrop-blur-none lg:border-none lg:p-0 lg:rounded-none lg:shadow-none">
+        <div class="w-full max-w-md relative z-10 bg-white/20 backdrop-blur-sm border border-white/30 p-8 sm:p-10 rounded-3xl shadow-2xl lg:bg-transparent lg:backdrop-blur-none lg:border-none lg:p-0 lg:rounded-none lg:shadow-none">
 
             <div class="lg:hidden mb-8 text-center">
                 <img src="uploads/img/Logo_AlFalah.png" alt="Logo Pondok Putri"
@@ -47,19 +47,19 @@
             <?php
             if (isset($_GET['pesan'])) {
                 if ($_GET['pesan'] == "gagal") {
-                    echo "<div class='flex items-center p-4 mb-6 text-sm text-red-800 border border-red-300 rounded-xl bg-red-50' role='alert'>
-                            <i class='fas fa-exclamation-circle mr-3 text-lg'></i>
-                            <span class='font-medium'>Gagal!</span> Username atau Password salah.
+                    echo "<div class='flex items-start p-4 mb-6 text-sm text-red-800 border border-red-300 rounded-xl bg-red-50/90 backdrop-blur-sm shadow-sm' role='alert'>
+                            <i class='fas fa-exclamation-circle mt-0.5 mr-3 text-lg shrink-0'></i>
+                            <div><span class='font-bold'>Gagal!</span> Username atau Password salah.</div>
                           </div>";
                 } else if ($_GET['pesan'] == "logout") {
-                    echo "<div class='flex items-center p-4 mb-6 text-sm text-green-800 border border-green-300 rounded-xl bg-green-50' role='alert'>
-                            <i class='fas fa-check-circle mr-3 text-lg'></i>
-                            <span class='font-medium'>Berhasil!</span> Anda telah logout dengan aman.
+                    echo "<div class='flex items-start p-4 mb-6 text-sm text-green-800 border border-green-300 rounded-xl bg-green-50/90 backdrop-blur-sm shadow-sm' role='alert'>
+                            <i class='fas fa-check-circle mt-0.5 mr-3 text-lg shrink-0'></i>
+                            <div><span class='font-bold'>Berhasil!</span> Anda telah logout dengan aman.</div>
                           </div>";
                 } else if ($_GET['pesan'] == "belum_login") {
-                    echo "<div class='flex items-center p-4 mb-6 text-sm text-yellow-800 border border-yellow-300 rounded-xl bg-yellow-50' role='alert'>
-                            <i class='fas fa-lock mr-3 text-lg'></i>
-                            <span class='font-medium'>Akses Ditolak!</span> Silakan login terlebih dahulu.
+                    echo "<div class='flex items-start p-4 mb-6 text-sm text-yellow-800 border border-yellow-300 rounded-xl bg-yellow-50/90 backdrop-blur-sm shadow-sm' role='alert'>
+                            <i class='fas fa-lock mt-0.5 mr-3 text-lg shrink-0'></i>
+                            <div><span class='font-bold'>Akses Ditolak!</span> Silakan login terlebih dahulu.</div>
                           </div>";
                 }
             }

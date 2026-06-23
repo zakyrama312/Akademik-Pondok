@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Asia/Jakarta');
 $host = "localhost";
 $user = "root"; // Sesuaikan dengan username phpMyAdmin kamu
 $pass = "";     // Kosongkan jika pakai XAMPP default
