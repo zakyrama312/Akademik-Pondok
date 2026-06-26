@@ -196,7 +196,7 @@ if ($format == 'excel') {
                 <div style="width: 280px; text-align: left;">
                     <br><br>Pengasuh Pondok
                     <div style="margin-top: 70px;">
-                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. Mas Mansyur Tasryudi</p>
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. MAS MANSYUR TASRYUDI</p>
                     </div>
                 </div>
             </div>

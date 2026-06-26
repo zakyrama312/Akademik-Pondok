@@ -180,7 +180,7 @@ $q_laporan = mysqli_query($koneksi, $query);
                 <div style="width: 280px; text-align: left;">
                     <br><br>Bendahara
                     <div style="margin-top: 70px;">
-                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">Ahmad Ulil Abshar</p>
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">M. AYNUR ROFIQ</p>
                     </div>
                 </div>
             </div>
@@ -188,7 +188,7 @@ $q_laporan = mysqli_query($koneksi, $query);
                 <div style="text-align: left; float: right; width: max-content;">
                     Brebes, <?php echo $tgl_indo; ?><br>Mengetahui,<br>Pengasuh
                     <div style="margin-top: 70px;">
-                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. Mas Mansyur Tasryudi</p>
+                        <p style="font-weight: bold; text-decoration: underline; margin: 0;">KH. MAS MANSYUR TASRYUDI</p>
                     </div>
                 </div>
             </div>
