@@ -5,10 +5,10 @@ if ($_SESSION['status'] != "sudah_login" || !in_array($_SESSION['role'], ['admin
 }
 require_once '../koneksi.php';
 
-// Ambil ID Pembayaran dari URL
-$id_pembayaran = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+// Ambil ID Tagihan dari URL
+$id_tagihan = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-if ($id_pembayaran == 0) {
+if ($id_tagihan == 0) {
     die("Data transaksi tidak valid.");
 }
 
@@ -21,7 +21,8 @@ $query = "
     JOIN tagihan t ON p.id_tagihan = t.id_tagihan
     JOIN santri s ON t.id_santri = s.id_santri
     LEFT JOIN wali_santri w ON s.id_wali = w.id_wali
-    WHERE p.id_pembayaran = $id_pembayaran
+    WHERE p.id_tagihan = $id_tagihan AND p.status_acc = 'Diterima'
+    ORDER BY p.id_pembayaran DESC LIMIT 1
 ";
 $result = mysqli_query($koneksi, $query);
 $data = mysqli_fetch_assoc($result);
