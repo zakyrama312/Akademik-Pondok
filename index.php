@@ -465,6 +465,21 @@
                     </div>
                     <p class="text-slate-400 leading-relaxed mb-6">Lembaga pendidikan Islam berbasis teknologi yang
                         berkomitmen mencetak generasi unggul, berakhlak mulia, dan siap menghadapi tantangan global.</p>
+                    
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/alfalahsalafiyahjatirokeh?igsh=MTM3ZW1qYzd0amxxOA==" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1BXg9kRdLG/" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://youtube.com/@alfalahfoundation?si=wp_Z7cDkqPUZPu_B" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@alfalahsalafyahjatirokeh?_r=1&_t=ZS-98GANaQpuvB" target="_blank" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:text-white transition duration-300">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <div>
